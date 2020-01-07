@@ -10,9 +10,9 @@ class base {
     ensure_packages($packages)
     file{'/etc/hostname':
         ensure  => file,
-        content => "${facts['networking']['fqdn']}\n"
+        content => "${facts['networking']['fqdn']}\n",
     }
-    flle{'/etc/puppet/hiera.yaml':
+    file{'/etc/puppet/hiera.yaml':
         ensure  => file,
         content => file('base/hiera.yaml'),
     }
