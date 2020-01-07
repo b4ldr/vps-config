@@ -40,7 +40,7 @@ my_fw::pre::rules:
     state: ['RELATED', 'ESTABLISHED']
     action: 'accept'
   '000 accept all icmp ipv6':
-    proto: 'icmp6'
+    proto: 'ipv6-icmp'
     action: 'accept'
     provider: ip6tables
   '001 accept all to lo interface ipv6':
