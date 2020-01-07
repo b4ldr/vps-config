@@ -10,3 +10,14 @@ knot::default_provide_xfrs:
 dns::zones_dir: 'puppet:///modules/dns/zones'
 dns::zones:
   - johnbond.org
+  - attackplanner.co.uk
+  - booklovergifts.com
+  - doggyholidayhome.com
+  - john-bond.co.uk
+  - john-bond.org.uk
+  - johnbond.org.uk
+  - mandybond.com
+  - mariposita.co.uk
+  - melcbond.com
+  - regbond.com
+
