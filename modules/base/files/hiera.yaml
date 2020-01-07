@@ -1,11 +1,11 @@
 ---
-:backends:
-  - yaml
+version: 5
+defaults:
+  datadir: /etc/puppet/code/production/hiera
+  data_hash: yaml_data
 
-:hierarchy:
-  - "nodes/%{::fqdn}"
-  - common
-
-:yaml:
-  :datadir: /etc/puppet/code/production/hiera
-
+hierarchy:
+  - name: "Per-node data (yaml version)"
+    path: "nodes/%{trusted.certname}.yaml" # Add file extension.
+  - name: common
+    paths: common.yaml
