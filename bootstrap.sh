@@ -7,4 +7,4 @@ cd /etc/puppet/code/production || exit 1
 sudo -u puppet bundle install --path="${BUNDLE_PATH:-.bundle/vendor}"
 bundle exec r10k puppetfile install
 cp /etc/puppet/code/production/modules/base/files/hiera.yaml /etc/puppet/hiera.yaml
-puppet apply  --modulepath=/etc/puppet/code/modules:/usr/share/puppet/modules:/etc/puppet/code/production/modules /etc/puppet/code/production/manifests/loki.pp
+puppet apply  --modulepath=/etc/puppet/code/modules:/usr/share/puppet/modules:/etc/puppet/code/production/modules /etc/puppet/code/production/manifests
