@@ -8,7 +8,7 @@ base::packages:
 base::users:
   jbond:
     user:
-      shell: zsh
+      shell: /bin/zsh
       groups:
         - sudo
       managehome: true
