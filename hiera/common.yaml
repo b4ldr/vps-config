@@ -19,22 +19,22 @@ base::users:
       key: 'AAAAC3NzaC1lZDI1NTE5AAAAIKWgKgk0wUrZkapYfUq57G5o7gkVWM+FzsHOEnT9hQpA'
 my_fw::pre:rules:
   '000 accept all icmp':
-        proto: 'icmp'
-        action: 'accept'
-    '001 accept all to lo interface':
-        proto: 'all'
-        iniface: 'lo'
-        action : 'accept'
-    '002 reject local traffic not on loopback interface':
-        iniface: '! lo'
-        proto: 'all'
-        destination: '127.0.0.1/8'
-        action: 'reject'
-    '003 accept ssh ':
-        proto: 'tcp'
-        port: 22
-        action: 'accept'
-    '004 accept related established rules':
-        proto: 'all'
-        state: ['RELATED', 'ESTABLISHED']
-        action: 'accept'
+    proto: 'icmp'
+    action: 'accept'
+  '001 accept all to lo interface':
+    proto: 'all'
+    iniface: 'lo'
+    action : 'accept'
+  '002 reject local traffic not on loopback interface':
+    iniface: '! lo'
+    proto: 'all'
+    destination: '127.0.0.1/8'
+    action: 'reject'
+  '003 accept ssh ':
+    proto: 'tcp'
+    port: 22
+    action: 'accept'
+  '004 accept related established rules':
+    proto: 'all'
+    state: ['RELATED', 'ESTABLISHED']
+    action: 'accept'
