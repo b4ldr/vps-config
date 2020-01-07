@@ -1,4 +1,6 @@
 node 'loki.johnbond.org' {
     include base
-    include ferm
+    include my_fw::pre
+    include firewall
+    include my_fw::post
 }
