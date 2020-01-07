@@ -6,7 +6,7 @@ knot::zones:
   johnbond.org:
     provide_xfrs:
       - ns1.he.net
-knot::file:
+knot::files:
   'johnbond.org':
     source: 'puppet:///modules/base/zones/johnbond.org'
 knot::zone:
