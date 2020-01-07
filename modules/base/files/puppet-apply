@@ -1,0 +1,2 @@
+#!/bin/sh
+puppet apply --modulepath=/etc/puppet/code/modules:/usr/share/puppet/modules:/etc/puppet/code/production/modules /etc/puppet/code/production/manifests/$(hostname -s).pp
