@@ -32,7 +32,7 @@ my_fw::pre::rules:
     action: 'reject'
   '003 accept ssh ':
     proto: 'tcp'
-    port: 22
+    dport: 22
     action: 'accept'
   '004 accept related established rules':
     proto: 'all'
