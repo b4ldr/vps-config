@@ -2,4 +2,4 @@
 code_dir=/etc/puppet/code/production
 cd "${code_dir}" || exit 1
 /usr/bin/git pull
-/usr/bin/puppet apply --modulepath="${code_dir}/modules:/usr/share/puppet/modules:/etc/puppet/code/production/modules" "${code_dir}/manifests/$(hostname -s).pp"
+/usr/bin/puppet apply --modulepath="/etc/puppet/code/modules:/usr/share/puppet/modules:${code_dir}/modules" "${code_dir}/manifests/$(hostname -s).pp"
