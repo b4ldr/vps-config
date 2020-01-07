@@ -5,14 +5,14 @@ node 'loki.johnbond.org' {
     include my_fw::post
     include knot
     firewall {'101 DNS ipv4':
-        proto   => 'all',
-        dport   => 53,
-        actions => 'accept',
+        proto  => 'all',
+        dport  => 53,
+        action => 'accept',
     }
     firewall {'101 DNS ipv6':
         proto    => 'all',
         dport    => 53,
-        actions  => 'accept',
+        action   => 'accept',
         provider => 'ip6tables',
     }
 }
