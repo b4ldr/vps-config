@@ -5,7 +5,7 @@ base::packages:
   - facter
   - puppet
   - zsh
-  - dig
+  - dnsutils
 base::users:
   jbond:
     user:
