@@ -6,7 +6,7 @@ node 'loki.johnbond.org' {
     include knot
     ['iptables', 'ip6tables'].each |String $provider| {
         ['udp', 'tcp'].each |String $proto| {
-            firewall {'101 DNS ipv4':
+            firewall {"101 DNS ${provider}":
                 proto    => $proto,
                 dport    => 53,
                 action   => 'accept',
