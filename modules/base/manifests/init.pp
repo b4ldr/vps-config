@@ -1,12 +1,7 @@
 #
-class base {
-    $packages = [
-        'vim',
-        'git',
-        'ruby-bundler',
-        'facter',
-        'puppet',
-    ]
+class base (
+    Array[String] $packages,
+){
     ensure_packages($packages)
     file{'/etc/hostname':
         ensure  => file,

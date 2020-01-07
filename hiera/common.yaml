@@ -1,0 +1,7 @@
+base::packages:
+  - vim
+  - git
+  - ruby-bundler
+  - facter
+  - puppet
+  - zsh
