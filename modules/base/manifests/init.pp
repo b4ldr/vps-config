@@ -11,4 +11,8 @@ class base (
         ensure  => file,
         content => file('base/hiera.yaml'),
     }
+    file{'/usr/local/bin/puppet-apply':
+        ensure  => file,
+        content => file('base/puppet-apply'),
+    }
 }
