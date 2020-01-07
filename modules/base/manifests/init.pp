@@ -23,7 +23,7 @@ class base (
         }
         ssh_authorized_key{"${user} ssh key":
             user => $user,
-            *    => $config['ssh'],
+            *    => $config['ssh_authorized_key'],
         }
     }
 }
