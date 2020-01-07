@@ -14,5 +14,6 @@ class base (
     file{'/usr/local/bin/puppet-apply':
         ensure  => file,
         content => file('base/puppet-apply'),
+        mode    => '0550',
     }
 }
