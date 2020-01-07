@@ -5,6 +5,7 @@ base::packages:
   - facter
   - puppet
   - zsh
+  - dig
 base::users:
   jbond:
     user:
