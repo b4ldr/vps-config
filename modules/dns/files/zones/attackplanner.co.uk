@@ -1,6 +1,5 @@
-$ORIGIN .
 $TTL 3600	; 1 hour
-attackplanner.co.uk	IN SOA	ns.johnbond.org. dns.johnbond.org. (
+@	IN SOA	ns.johnbond.org. dns.johnbond.org. (
 				2020010700 ; serial
 				3600       ; refresh (1 hour)
 				600        ; retry (10 minutes)
@@ -12,11 +11,7 @@ attackplanner.co.uk	IN SOA	ns.johnbond.org. dns.johnbond.org. (
 			A	199.38.182.204
 			MX	10 ns.johnbond.org.
 			AAAA	2607:f740:e::f2d
-$ORIGIN attackplanner.co.uk.
-$TTL 3600	; 1 hour
 $TTL 21600	; 6 hours
-@			A	199.38.182.204
-			AAAA	2607:f740:e::f2d
 www			A	199.38.182.204
 			AAAA	2607:f740:e::f2d
 login			A	199.38.182.204
