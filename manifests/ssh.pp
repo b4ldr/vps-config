@@ -1,3 +1,0 @@
-node /^ssh/ {
-    include network
-}
