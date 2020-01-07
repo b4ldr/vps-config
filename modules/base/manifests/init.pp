@@ -17,7 +17,7 @@ class base (
         content => file('base/puppet-apply'),
         mode    => '0550',
     }
-    $users.each_pair |String $user, Hash $config| {
+    $users.each |String $user, Hash $config| {
         user{$user:
             * => $config['user'],
         }
