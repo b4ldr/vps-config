@@ -5,3 +5,16 @@ base::packages:
   - facter
   - puppet
   - zsh
+base::users:
+  jbond:
+    user:
+      shell: zsh
+      groups:
+        - sudo
+      managehome: true
+      membership: minimum
+    authorized_key:
+      ensure: present
+      type: ssh-ed25519
+      key: 'AAAAC3NzaC1lZDI1NTE5AAAAIKWgKgk0wUrZkapYfUq57G5o7gkVWM+FzsHOEnT9hQpA'
+    

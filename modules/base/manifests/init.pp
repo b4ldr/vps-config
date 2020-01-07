@@ -1,6 +1,7 @@
 #
 class base (
     Array[String] $packages,
+    Hash[String, Hash] $users,
 ){
     ensure_packages($packages)
     file{'/etc/hostname':
@@ -15,5 +16,14 @@ class base (
         ensure  => file,
         content => file('base/puppet-apply'),
         mode    => '0550',
+    }
+    $users.each_pair |String $user, Hash $config| {
+        user{$user:
+            * => $config['user'],
+        }
+        ssh_authorized_key{"${user} ssh key":
+            user => $user,
+            *    => $config['ssh'],
+        }
     }
 }
