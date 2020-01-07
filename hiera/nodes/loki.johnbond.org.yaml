@@ -5,10 +5,10 @@ knot::remotes:
   'ns1.he.net':
     address4: '216.218.133.2'
     address6: '2001:470:600::2'
+knot::default_provide_xfrs:
+  - ns1.he.net
 knot::zones:
-  johnbond.org:
-    provide_xfrs:
-      - ns1.he.net
+  johnbond.org: {}
 knot::files:
   'johnbond.org':
     source: 'puppet:///modules/base/zones/johnbond.org'
