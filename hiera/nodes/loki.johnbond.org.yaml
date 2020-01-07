@@ -1,7 +1,7 @@
 knot::remotes:
   'ns1.he.net':
-    address4: 216.218.130.2
-    address6: 2001:470:100::2
+    address4: '216.218.130.2'
+    address6: '2001:470:100::2'
 knot::zones:
   johnbond.org:
     provide_xfrs:
