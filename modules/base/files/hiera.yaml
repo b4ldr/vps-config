@@ -8,4 +8,4 @@ hierarchy:
   - name: "Per-node data (yaml version)"
     path: "nodes/%{trusted.certname}.yaml" # Add file extension.
   - name: common
-    paths: common.yaml
+    path: common.yaml
