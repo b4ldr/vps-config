@@ -30,7 +30,7 @@ my_fw::pre::rules:
     proto: 'all'
     destination: '127.0.0.1/8'
     action: 'reject'
-  '003 accept ssh ':
+  '003 accept ssh':
     proto: 'tcp'
     dport: 22
     action: 'accept'
@@ -38,3 +38,28 @@ my_fw::pre::rules:
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
     action: 'accept'
+  '000 accept all icmp ipv6':
+    proto: 'icmp'
+    action: 'accept'
+    provider: ip6tables
+  '001 accept all to lo interface ipv6':
+    proto: 'all'
+    iniface: 'lo'
+    action : 'accept'
+    provider: ip6tables
+  '002 reject local traffic not on loopback interface ipv6':
+    iniface: '! lo'
+    proto: 'all'
+    destination: '::1'
+    action: 'reject'
+    provider: ip6tables
+  '003 accept ssh ipv6':
+    proto: 'tcp'
+    dport: 22
+    action: 'accept'
+    provider: ip6tables
+  '004 accept related established rules ipv6':
+    proto: 'all'
+    state: ['RELATED', 'ESTABLISHED']
+    action: 'accept'
+    provider: ip6tables
