@@ -22,7 +22,7 @@ class email (
     }
     $domains.each |String $domain, Hash $config| {
         $content = $config.has_key('aliases') ? {
-            true    => $config['aliases'].reduce |$memo, $alias| {
+            true    => $config['aliases'].reduce('') |$memo, $alias| {
                 "${memo}\n${alias[0]}: ${alias[1]}"
             },
             default => '',
