@@ -583,8 +583,6 @@ system_aliases:
   allow_fail
   allow_defer
   data = ${expand:${lookup{$local_part}lsearch{<%= @virtual_dir %>/$domain}}}
-  user = mailnull
-  group = mail
   file_transport = address_file
   pipe_transport = address_pipe
 
