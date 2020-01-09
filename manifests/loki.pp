@@ -4,4 +4,5 @@ node 'loki.johnbond.org' {
     include firewall
     include my_fw::post
     include dns
+    include email
 }

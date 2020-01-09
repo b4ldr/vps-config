@@ -1,5 +1,5 @@
 #
-class exim (
+class email (
     Stdlib::Unixpath $virtual_dir = '/etc/exim4/virtual_dir',
     Stdlib::Unixpath $tls_cert = '/etc/ssl/certs/imaps.johnbond.org.pem',
     Stdlib::Unixpath $tls_key = '/etc/ssl/private/imaps.johnbond.org.key',
