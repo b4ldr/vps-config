@@ -1,3 +1,4 @@
+exim_path = /usr/sbin/exim4
 # Specify your host's canonical name here. This should normally be the fully
 # qualified "official" name of your host. If this option is not set, the
 # uname() function is called to obtain the name. In many cases this does
@@ -62,6 +63,7 @@ hostlist   relay_from_hosts = localhost
 
 acl_smtp_rcpt = acl_check_rcpt
 acl_smtp_data = acl_check_data
+helo_try_verify_hosts = *
 
 # disable for now as ietf mail getting lost
 #acl_smtp_dkim = acl_check_dkim
@@ -99,6 +101,7 @@ acl_smtp_data = acl_check_data
 # Allow any client to use TLS.
 
 tls_advertise_hosts = *
+tls_require_ciphers = NORMAL:%SERVER_PRECEDENCE
 
 # Specify the location of the Exim server's TLS certificate and private key.
 # The private key must not be encrypted (password protected). You can put
