@@ -11,7 +11,7 @@ class email (
         ensure  => file,
         group   => 'Debian-exim',
         mode    => '0440',
-        content => template('exim/exim.conf.erb'),
+        content => template('email/exim.conf.erb'),
     }
     file {$virtual_dir:
         ensure => directory,
