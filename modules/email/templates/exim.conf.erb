@@ -401,18 +401,6 @@ acl_check_rcpt:
     message = X-Warning: $sender_host_address is listed at $dnslist_domain ($dnslist_value: $dnslist_text)
     dnslists = zen.spamhaus.org
 
-  # Query the SPF information for the sender address domain, if any,
-  # to see if the sending host is authorized to deliver its mail.
-  # If not, reject the mail.
-  #
-  # deny
-  #   message     = [SPF] $sender_host_address is not allowed to send mail \
-  #                 from $sender_address_domain
-  #   log_message = SPF check failed.
-  #   spf         = fail
-
-
-  # Add a SPF-Received: header to the message
   warn
     message     = $spf_received
 
