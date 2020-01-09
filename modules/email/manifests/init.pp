@@ -13,6 +13,7 @@ class email (
         group   => 'Debian-exim',
         mode    => '0440',
         content => template('email/exim.conf.erb'),
+        notify  => Service['exim'],
     }
     file {$virtual_dir:
         ensure => directory,
@@ -29,7 +30,12 @@ class email (
             group   => 'Debian-exim',
             mode    => '0440',
             content => $content,
+            notify  => Service['exim'],
         }
+    }
+    service {'exim':
+        ensure => running,
+        enable => true,
     }
 
 }
