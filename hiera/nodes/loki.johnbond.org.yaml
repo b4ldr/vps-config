@@ -27,3 +27,6 @@ email::domains:
       john: jbond
       mail: jbond
       postmaster: jbond
+  melcbond.com:
+    aliases:
+      mail: mel
