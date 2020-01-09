@@ -21,7 +21,7 @@ class email (
     }
     $domains.each |String $domain, Hash $config| {
         $content = $config.has_key('aliases') ? {
-            true    => $config['aliases'].to_yaml,
+            true    => $config['aliases'].to_yaml.regsubst('^---$', 'Managed by puppet'),
             default => '',
         }
         file {"${virtual_dir}/${domain}":
