@@ -20,4 +20,10 @@ dns::zones:
   - mariposita.co.uk
   - melcbond.com
   - regbond.com
-
+email::domains:
+  jonhnbond.org:
+    aliases:
+      root: jbond
+      john: jbond
+      mail: jbond
+      postmaster: jbond
