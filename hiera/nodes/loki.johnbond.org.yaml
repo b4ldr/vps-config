@@ -21,7 +21,7 @@ dns::zones:
   - melcbond.com
   - regbond.com
 email::domains:
-  jonhbond.org:
+  johnbond.org:
     aliases:
       root: jbond
       john: jbond
