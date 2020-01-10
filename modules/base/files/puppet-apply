@@ -3,4 +3,4 @@ code_dir=/etc/puppet/code/production
 cd "${code_dir}" || exit 1
 output=$(/usr/bin/git pull)
 output="${output}\\n/usr/bin/bundle exec r10k puppetfile install"
-puppet_output=$(/usr/bin/puppet apply --modulepath="/etc/puppet/code/modules:/usr/share/puppet/modules:${code_dir}/modules" "${code_dir}/manifests/") || printf "%s\\n%s" "${output}" "${puppet_output}"
+puppet_output=$(/usr/bin/puppet apply --detailed-exitcodes --modulepath="/etc/puppet/code/modules:/usr/share/puppet/modules:${code_dir}/modules" "${code_dir}/manifests/") || printf "%s\\n%s" "${output}" "${puppet_output}"
