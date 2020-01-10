@@ -16,9 +16,11 @@ class email (
         notify  => Service['exim4'],
     }
     file {$virtual_dir:
-        ensure => directory,
-        group  => 'Debian-exim',
-        mode   => '0440',
+        ensure  => directory,
+        group   => 'Debian-exim',
+        mode    => '0440',
+        recurse => true,
+        purge   => true,
     }
     $domains.each |String $domain, Hash $config| {
         $content = $config.has_key('aliases') ? {
