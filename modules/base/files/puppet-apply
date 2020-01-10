@@ -1,6 +1,8 @@
 #!/bin/sh
 code_dir=/etc/puppet/code/production
 cd "${code_dir}" || exit 1
-output=$(/usr/bin/git pull)
-output="${output}\\n/usr/bin/bundle exec r10k puppetfile install"
-puppet_output=$(/usr/bin/puppet apply --detailed-exitcodes --modulepath="/etc/puppet/code/modules:/usr/share/puppet/modules:${code_dir}/modules" "${code_dir}/manifests/") || printf "%s\\n%s\\n" "${output}" "${puppet_output}"
+git_output=$(/usr/bin/git pull)
+r10k_output=$(/usr/bin/bundle exec r10k puppetfile install)
+puppet_output=$(/usr/bin/puppet apply --detailed-exitcodes \
+  --modulepath="/etc/puppet/code/modules:/usr/share/puppet/modules:${code_dir}/modules" \
+  "${code_dir}/manifests/") || printf "%s\\n%s\\n%s\\n" "${git_output}" "${r10k_output}" "${puppet_output}"
