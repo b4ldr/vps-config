@@ -7,7 +7,7 @@ class email (
     Stdlib::Host     $qualify_domain = 'johnbond.org',
     Hash             $domains        = {},
 ) {
-    ensure_packages(['exim4-daemon-heavy', 'procmail'])
+    ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot'])
     file { '/etc/exim4/exim4.conf':
         ensure  => file,
         group   => 'Debian-exim',
