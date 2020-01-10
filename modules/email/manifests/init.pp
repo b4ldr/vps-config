@@ -39,7 +39,7 @@ class email (
     }
     file {'/etc/dovecot/local.conf':
         ensure  => file,
-        content => template('dovecot.conf.erb'),
+        content => template('email/dovecot.conf.erb'),
         notify  => Service['dovecot'],
     }
     service {['exim4', 'dovecot']:
