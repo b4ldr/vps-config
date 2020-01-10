@@ -37,8 +37,14 @@ class email (
             notify  => Service['exim4'],
         }
     }
-    service {'exim4':
+    file {'/etc/dovecot/local.conf':
+        ensure  => file,
+        content => template('dovecot.conf.erb'),
+        notify  => Service['dovecot'],
+    }
+    service {['exim4', 'dovecot']:
         ensure => running,
         enable => true,
     }
+
 }
