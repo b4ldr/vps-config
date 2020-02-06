@@ -133,4 +133,5 @@ apache::default_vhost: false
 http::vhosts:
   attackplanner.co.uk:
     git_source: https://github.com/b4ldr/tw-attack-planner
-    apache: {}
+    apache:
+      serveraliases: www.attackplanner.co.uk
