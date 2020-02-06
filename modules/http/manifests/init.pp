@@ -17,7 +17,7 @@ class http (
             vcsrepo {$_config['docroot']:
                 ensure   => latest,
                 provider => git,
-                source   => $_config['git_source'],
+                source   => $config['git_source'],
             }
         } else {
             file {$_config['docroot']:
