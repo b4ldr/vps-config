@@ -12,7 +12,7 @@ class http (
             'docroot' => "${docroot_base}/${vhost}",
         }
         $_config = $config['apache'] + $default
-        if $_config.has_key('git_source') {
+        if $config.has_key('git_source') {
             vcsrepo {$_config['docroot']:
                 ensure   => latest,
                 provider => git,
