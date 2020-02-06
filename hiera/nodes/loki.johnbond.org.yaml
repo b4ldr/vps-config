@@ -129,3 +129,8 @@ email::domains:
   mariposita.co.uk:
     aliases:
       mail: melcreade@gmail.com
+apache::default_vhost: false
+http::vhosts:
+  attackplanner.co.uk:
+    git_source: https://github.com/b4ldr/tw-attack-planner
+    apache: {}
