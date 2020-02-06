@@ -7,7 +7,7 @@ class email (
     Stdlib::Host     $qualify_domain = 'johnbond.org',
     Hash             $domains        = {},
 ) {
-    ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot-imapd'])
+    ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot-imapd', 'sasl2-bin'])
     file { '/etc/exim4/exim4.conf':
         ensure  => file,
         group   => 'Debian-exim',
@@ -42,7 +42,12 @@ class email (
         content => template('email/dovecot.conf.erb'),
         notify  => Service['dovecot'],
     }
-    service {['exim4', 'dovecot']:
+    group {'sasl':
+        members => 'Debian-exim',
+        require => Paclage['sals2-bin', 'exim4-daemon-heavy'],
+    }
+    # TODO: puppeitise START=yes in /etc/default/saslauthd
+    service {['exim4', 'dovecot', 'saslauthd']:
         ensure => running,
         enable => true,
     }
