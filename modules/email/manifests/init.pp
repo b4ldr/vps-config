@@ -44,7 +44,7 @@ class email (
     }
     group {'sasl':
         members => 'Debian-exim',
-        require => Paclage['sals2-bin', 'exim4-daemon-heavy'],
+        require => Package['sals2-bin', 'exim4-daemon-heavy'],
     }
     # TODO: puppeitise START=yes in /etc/default/saslauthd
     service {['exim4', 'dovecot', 'saslauthd']:
