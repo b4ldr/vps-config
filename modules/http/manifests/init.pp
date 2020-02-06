@@ -10,6 +10,7 @@ class http (
     $vhosts.each |$vhost, $config| {
         $default = {
             'docroot' => "${docroot_base}/${vhost}",
+            'port'    => '80',
         }
         $_config = $config['apache'] + $default
         if $config.has_key('git_source') {
