@@ -1,7 +1,7 @@
 $TTL 1h ; Set TTL to one hour for all important RRsets
 
 @	SOA	ns.johnbond.org. dns.johnbond.org. (
-		2020010900 ; Serial
+		2020020600 ; Serial
 		1h ; Refresh
 		10m ; Retry
 		10d; Expire
