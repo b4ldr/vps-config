@@ -46,5 +46,14 @@ class email (
         ensure => running,
         enable => true,
     }
-
+    ['iptables', 'ip6tables'].each |String $provider| {
+        [25, 465, 587].each |String $port| {
+            firewall {"102 email ${provider} ${port}":
+                proto    => 'tcp',
+                dport    => $port,
+                action   => 'accept',
+                provider => $provider,
+            }
+        }
+    }
 }
