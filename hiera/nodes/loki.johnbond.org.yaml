@@ -121,3 +121,12 @@ email::domains:
   melcbond.com:
     aliases:
       mail: mel
+  mandybond.com:
+    aliases:
+      mail: mam
+  regbond.com:
+    aliases:
+      mail : dad
+  mariposita.co.uk:
+    aliases:
+      mail: melcreade@gmail.com
