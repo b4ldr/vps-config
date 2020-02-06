@@ -1,6 +1,6 @@
 $TTL 3600	; 1 hour
 @	IN SOA	ns.johnbond.org. dns.johnbond.org. (
-				2020010700 ; serial
+				2020020600 ; serial
 				3600       ; refresh (1 hour)
 				600        ; retry (10 minutes)
 				864000     ; expire (1 week 3 days)
@@ -9,7 +9,7 @@ $TTL 3600	; 1 hour
 			NS	loki.johnbond.org.
 			NS	ns1.he.net.
 			A	199.38.182.204
-			MX	10 ns.johnbond.org.
+			MX	10 loki.johnbond.org.
 			AAAA	2607:f740:e::f2d
 $TTL 21600	; 6 hours
 www			A	199.38.182.204
