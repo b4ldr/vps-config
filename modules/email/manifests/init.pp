@@ -43,6 +43,7 @@ class email (
         notify  => Service['dovecot'],
     }
     group {'sasl':
+        ensure  => 'present',
         members => 'Debian-exim',
         require => Package['sasl2-bin', 'exim4-daemon-heavy'],
     }
