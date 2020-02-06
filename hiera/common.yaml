@@ -6,6 +6,7 @@ base::packages:
   - puppet
   - zsh
   - dnsutils
+  - sasl2-bin
 base::users:
   jbond:
     user:
