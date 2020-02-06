@@ -10,7 +10,7 @@ $TTL 1h ; Set TTL to one hour for all important RRsets
 	NS	loki.johnbond.org.
 	NS	ns1.he.net.
 
-	MX	10 ns.johnbond.org.
+	MX	10 loki.johnbond.org.
     TXT     "keybase-site-verification=h5HhRW3FpEfaZ8b8cHNtyFHpyZ25G7VqmnHx8pz2sqE"
 	TXT     "google-site-verification=6wKMFEjngc_IWdCCetCN9xLkFXhArnImWLMOgp8o_FQ"
 	TXT     "v=spf1 +mx ip4:199.38.182.204 ip6:2607:f740:e::f2d ip4:206.189.25.239 ip6:2a03:b0c0:1:e0::4f7:f001 -all"
@@ -29,9 +29,9 @@ tw	A       199.38.182.204
 sso	A       18.221.94.108
 ssh	A       199.38.182.204
         AAAA    2607:f740:e::f2d
-imaps	A       199.38.182.204
-        AAAA    2607:f740:e::f2d
 office-poe IN A 192.168.1.251
 aruba-ap IN A 192.168.1.252
 loki IN A 206.189.25.239
 loki IN AAAA 2a03:b0c0:1:e0::4f7:f001
+imaps IN A 206.189.25.239
+imaps IN AAAA 2a03:b0c0:1:e0::4f7:f001
