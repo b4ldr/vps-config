@@ -47,7 +47,7 @@ class email (
         enable => true,
     }
     ['iptables', 'ip6tables'].each |String $provider| {
-        [25, 465, 587].each |String $port| {
+        ['25', '465', '587'].each |String $port| {
             firewall {"102 email ${provider} ${port}":
                 proto    => 'tcp',
                 dport    => $port,
