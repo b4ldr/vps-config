@@ -33,9 +33,11 @@ class base (
         }
         file{"/home/${user}":
             ensure  => directory,
-            source  => "puppet:///modules/base/users/${user}",
             mode    => '0600',
+            owner   => $user,
+            group   => $user,
             recurse => 'remote',
+            source  => "puppet:///modules/base/users/${user}",
         }
     }
 }
