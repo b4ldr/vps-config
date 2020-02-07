@@ -55,7 +55,7 @@ define irssi::user_config (
             default => true,
         }
         if $autorun {
-            file {"${home_path}/.irssi/scripts/${script}":
+            file {"${home_path}/.irssi/scripts/autorun/${script}":
                 ensure => link,
                 source => $config['source'],
                 owner  => $name,
