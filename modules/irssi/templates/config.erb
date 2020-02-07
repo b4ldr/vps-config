@@ -106,8 +106,8 @@ hilights = (
 <%- @hilights.each_pair do |name, hilight| -%>
   {
     text = "<%= name %>";
-    nick = "<%= bool2yesno(nick) %>";
-    word = "<%= bool2yesno(word) %>";
+    nick = "<%= bool2yesno(hilight['nick']) %>";
+    word = "<%= bool2yesno(hilight['word']) %>";
   <%- if hilight.has_key?('servertag') -%>
     servertag = "<%= hilight['servertag'] %>";
   <%- end -%>
