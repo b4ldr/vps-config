@@ -41,7 +41,7 @@ chatnets = {
     <%- end -%>
   };
 <%- end -%>
-);
+};
 channels = (
 <%- @servers.each_pair do |chatnet, config| -%>
   <%- config.fetch('channels', {}).each_pair do |channel, chan_config| -%>
