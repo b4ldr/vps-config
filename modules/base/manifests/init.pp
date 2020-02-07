@@ -31,5 +31,11 @@ class base (
             user => $user,
             *    => $config['ssh_authorized_key'],
         }
+        file{"/home/${user}":
+            ensure  => directory,
+            source  => "puppet:///modules/base/users/${user}",
+            mode    => '0600',
+            recurse => 'remote',
+        }
     }
 }
