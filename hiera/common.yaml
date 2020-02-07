@@ -6,6 +6,7 @@ base::packages:
   - puppet
   - zsh
   - dnsutils
+  - tmux
 base::users:
   jbond:
     user:
