@@ -15,7 +15,7 @@ define irssi::user_config (
     Optional[Hash[String[1],String[1]]]      $extra_aliases              = {},
     Optional[Hash[String[1],String[1]]]      $perl_script_config         = {},
     Optional[Array[Irssi::Ignore]]           $ignores                    = [],
-    Optional[Hash[String[1], Irssi::Hlight]] $hilights                   = {},
+    Optional[Hash[String[1], Irssi::Hilight]] $hilights                   = {},
 ) {
     include irssi
     $aliases = $extra_aliases + $irssi::default_aliases
