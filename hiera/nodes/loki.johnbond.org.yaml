@@ -140,3 +140,48 @@ http::vhosts:
     apache:
       serveraliases: www.johnbond.org
       redirect_dest: https://b4ldr.wordpress.com/
+irssi::user_configs:
+  jbond:
+    real_name: 'John Bond'
+    user_name: 'jbond42'
+    nick: 'jbond42'
+    servers:
+      terahertz:
+        address: 'irc.terahertz.net'
+      freenode:
+        address: 'chat.freenode.net'
+        sasl_mechanism: 'PLAIN'
+        sasl_username: "%alias('secret::sasl_username')"
+        sasl_password: "%alias('secret::sasl_password')"
+        channels:
+          '#dns': {}
+          '#puppet': {}
+          '#voxpupuli': {}
+          '#wikimedia-staff': {}
+          '#wikimedia-operations': {}
+          '#wikimedia-security': {}
+          '#wikimedia': {}
+          '#wikimedia-dcops': {}
+          '#wikimedia-tech': {}
+          '#wikimedia-serviceops': {}
+          '#wikimedia-sre': {}
+          '#wikimedia-sre-foundations': {}
+          '#wikimedia-sre-private': {}
+          '#wikimedia-analytics': {}
+          '#wikimedia-traffic': {}
+          '#wikimedia-cloud': {}
+          '#wikimedia-cloud-admin': {}
+          '#wikimedia-clinic': {}
+irssi::perl_script_config:
+  awl_shared_sbar: 'OFF'
+  awl_viewer: 'yes'
+  awl_custom_xform: 's/wikimedia-/w-/'
+  tmux_away_nick: ''
+  tmux_away_grace: '900'
+  trackbar_require_seen: 'yes'
+  trackbar_string: '~'
+  trackbar_style: '%Y'
+  prowl_apikey: "%alias('secret::prowl_apikey')"
+  awl_no_mode_hint: 'yes'
+  shorturl_debug: 'yes'
+  shorturl_send_to_channel: 'yes'

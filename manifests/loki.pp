@@ -6,4 +6,5 @@ node 'loki.johnbond.org' {
     include dns
     include email
     include http
+    include irssi
 }
