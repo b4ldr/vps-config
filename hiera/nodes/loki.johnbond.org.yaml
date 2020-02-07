@@ -226,4 +226,13 @@ irssi::user_configs:
       'go.pl': {}
       'nickcolor.pl': {}
       'trackbar.pl': {}
-
+      'adv_windowlist.pl':
+        source: 'puppet:///modules/irssi/adv_windowlist.pl'
+      'oopsie.pl':
+        source: 'puppet:///modules/irssi/oopsie.pl'
+      'prowl.pl':
+        source: 'puppet:///modules/irssi/prowl.pl'
+      'splitlong.pl':
+        source: 'puppet:///modules/irssi/splitlong.pl'
+      'tmux_away.pl':
+        source: 'puppet:///modules/irssi/tmux_away.pl'
