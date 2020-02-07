@@ -10,7 +10,7 @@ set spellcapcheck=''
 au BufRead,BufNewFile *.nse set ft=lua
 au BufRead,BufNewFile *.cf set ft=cf3
 au BufRead,BufNewFile *.j2 set ft=jinja
-call pathogen#infect()
+"call pathogen#infect()
 "
 
 set shiftwidth=2
