@@ -16,10 +16,13 @@ define irssi::user_config (
     Optional[Hash[String[1],String]]          $perl_script_config         = {},
     Optional[Array[Irssi::Ignore]]            $ignores                    = [],
     Optional[Hash[String[1], Irssi::Hilight]] $hilights                   = {},
+    Optional[Hash[String[1], Irssi::Script]]  $scripts                    = {},
 ) {
     include irssi
     $aliases = $extra_aliases + $irssi::default_aliases
-    file { "${home_path}/.irssi":
+    file { ["${home_path}/.irssi",
+            "${home_path}/.irssi/scripts",
+            "${home_path}/.irssi/scripts/autorun"]:
         ensure => directory,
         owner  => $name,
     }
@@ -34,5 +37,31 @@ define irssi::user_config (
         content => template('irssi/config.erb'),
         owner   => $name,
         mode    => '0600',
+    }
+    $scripts.each |String $script, Irssi::Script $config| {
+        if $config.has_key('source') {
+            file {"${home_path}/.irssi/scripts/${script}":
+                ensure => file,
+                source => $config['source'],
+                owner  => $name,
+                mode   => '0600',
+            }
+            $tagret = "${home_path}/.irssi/scripts/${script}"
+        } else {
+            $target = "/usr/share/irssi/scripts/${script}"
+        }
+        $autorun = $config.has_key('autorun') ? {
+            true    => $config['autorun'],
+            default => true,
+        }
+        if $autorun {
+            file {"${home_path}/.irssi/scripts/${script}":
+                ensure => link,
+                source => $config['source'],
+                owner  => $name,
+                target => $target,
+            }
+        }
+
     }
 }

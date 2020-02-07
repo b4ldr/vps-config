@@ -221,3 +221,9 @@ irssi::user_configs:
         word: false
         channels:
           - '#wikimedia-operations'
+    scripts:
+      'autowhois.pl': {}
+      'go.pl': {}
+      'nickcolor.pl': {}
+      'trackbar.pl': {}
+
