@@ -172,16 +172,52 @@ irssi::user_configs:
           '#wikimedia-cloud': {}
           '#wikimedia-cloud-admin': {}
           '#wikimedia-clinic': {}
-irssi::perl_script_config:
-  awl_shared_sbar: 'OFF'
-  awl_viewer: 'yes'
-  awl_custom_xform: 's/wikimedia-/w-/'
-  tmux_away_nick: ''
-  tmux_away_grace: '900'
-  trackbar_require_seen: 'yes'
-  trackbar_string: '~'
-  trackbar_style: '%Y'
-  prowl_apikey: "%alias('secret::prowl_apikey')"
-  awl_no_mode_hint: 'yes'
-  shorturl_debug: 'yes'
-  shorturl_send_to_channel: 'yes'
+    perl_script_config:
+      awl_shared_sbar: 'OFF'
+      awl_viewer: 'yes'
+      awl_custom_xform: 's/wikimedia-/w-/'
+      tmux_away_nick: ''
+      tmux_away_grace: '900'
+      trackbar_require_seen: 'yes'
+      trackbar_string: '~'
+      trackbar_style: '%Y'
+      prowl_apikey: "%alias('secret::prowl_apikey')"
+      awl_no_mode_hint: 'yes'
+      shorturl_debug: 'yes'
+      shorturl_send_to_channel: 'yes'
+    ignores:
+      - level:
+          - JOINS
+          - QUITS
+      - mask: help
+        level:
+          - ALL
+      - mask: wikibugs
+        level:
+          - ALL
+          - NO_ACT
+        pattern: '(Jbond|Muehlenhoff)'
+        regexp: true
+        exception: true
+      - mask: stashbot
+        level:
+          - ALL
+    hilights:
+      jbond:
+        nick: true
+        word: true
+      '14907':
+        nick: false
+        word: false
+        servertag: terahertz
+      '#page':
+        color: '%R'
+        nick: false
+        word: false
+        matchcase: true
+      'Widespread puppet agent failures':
+        color: '%Y'
+        nick: false
+        word: false
+        channels:
+          - '#wikimedia-operations'
