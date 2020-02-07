@@ -14,7 +14,7 @@ servers = (
     address = "<%= config['address'] %>";
     port = "<%= config.fetch('port', '6697') %>";
     use_tls = "<%= bool2yesno(config.fetch('use_tls', true)) %>";
-    tls_verify = "<%= bool2yesno(config.fetch('use_tls', true)) %>";
+    tls_verify = "<%= bool2yesno(config.fetch('tls_verify', true)) %>";
     autoconnect = "<%= bool2yesno(config.fetch('use_tls', true)) %>";
   },
 <%- end -%>
