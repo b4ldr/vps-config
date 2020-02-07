@@ -23,6 +23,12 @@ define irssi::user_config (
         ensure => directory,
         owner  => $name,
     }
+    file { "${home_path}/.irssi/${theme}.theme":
+        ensure  => file,
+        content => file("irssi/${theme}.theme"),
+        owner   => $name,
+        mode    => '0600',
+    }
     file { "${home_path}/.irssi/config":
         ensure  => file,
         content => template('irssi/config.erb'),
