@@ -195,11 +195,15 @@ irssi::user_configs:
           - ALL
       - mask: wikibugs
         level:
-          - ALL
           - NO_ACT
+          - ALL
         pattern: '(Jbond|Muehlenhoff)'
         regexp: true
         exception: true
+      - mask: wikibugs
+        level:
+          - NO_ACT
+          - ALL
       - mask: stashbot
         level:
           - ALL
@@ -216,7 +220,7 @@ irssi::user_configs:
         nick: false
         word: false
         matchcase: true
-      'Widespread puppet agent failures':
+      "'Widespread puppet agent failures'":
         color: '%Y'
         nick: false
         word: false
