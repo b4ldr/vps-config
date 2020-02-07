@@ -148,6 +148,7 @@ irssi::user_configs:
     servers:
       terahertz:
         address: 'irc.terahertz.net'
+        tls_verify: false
       freenode:
         address: 'chat.freenode.net'
         sasl_mechanism: 'PLAIN'
