@@ -151,8 +151,8 @@ irssi::user_configs:
       freenode:
         address: 'chat.freenode.net'
         sasl_mechanism: 'PLAIN'
-        sasl_username: "%alias('secret::sasl_username')"
-        sasl_password: "%alias('secret::sasl_password')"
+        sasl_username: "%{alias('secret::sasl_username')}"
+        sasl_password: "%{alias('secret::sasl_password')}"
         channels:
           '#dns': {}
           '#puppet': {}
@@ -181,7 +181,7 @@ irssi::user_configs:
       trackbar_require_seen: 'yes'
       trackbar_string: '~'
       trackbar_style: '%Y'
-      prowl_apikey: "%alias('secret::prowl_apikey')"
+      prowl_apikey: "%{alias('secret::prowl_apikey')}"
       awl_no_mode_hint: 'yes'
       shorturl_debug: 'yes'
       shorturl_send_to_channel: 'yes'
