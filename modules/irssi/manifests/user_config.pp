@@ -46,7 +46,7 @@ define irssi::user_config (
                 owner  => $name,
                 mode   => '0600',
             }
-            $tagret = "${home_path}/.irssi/scripts/${script}"
+            $taget = "${home_path}/.irssi/scripts/${script}"
         } else {
             $target = "/usr/share/irssi/scripts/${script}"
         }
