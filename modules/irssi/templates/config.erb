@@ -21,8 +21,8 @@ servers = (
 );
 chatnets = {
 <%- @servers.each_pair do |chatnet, config| -%>
-  <%= chatnet %> = { 
-    type = "IRC",
+  <%= chatnet %> = {
+    type = "IRC";
     max_kicks = "<%= config.fetch('kicks', 4) %>";
     max_query_chans = "<%= config.fetch('querychans', 5) %>";
     max_msgs = "<%= config.fetch('kicks', 5) %>";
