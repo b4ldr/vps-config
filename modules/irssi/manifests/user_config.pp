@@ -19,6 +19,10 @@ define irssi::user_config (
 ) {
     include irssi
     $aliases = $extra_aliases + $irssi::default_aliases
+    file { "${home_path}/.irssi":
+        ensure => directory,
+        owner  => $name,
+    }
     file { "${home_path}/.irssi/config":
         ensure  => file,
         content => template('irssi/config.erb'),
