@@ -167,6 +167,7 @@ irssi::user_configs:
           '#wikimedia-serviceops': {}
           '#wikimedia-sre': {}
           '#wikimedia-sre-foundations': {}
+          '#mediawiki_security': {}
           '#wikimedia-sre-private': {}
           '#wikimedia-analytics': {}
           '#wikimedia-traffic': {}
