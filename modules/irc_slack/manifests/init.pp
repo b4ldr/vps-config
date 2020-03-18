@@ -30,4 +30,5 @@ class irc_slack (
         ensure  => link,
         target  => "${source_dir}/irc-slack",
         require => Exec['go build']
+    }
 }
