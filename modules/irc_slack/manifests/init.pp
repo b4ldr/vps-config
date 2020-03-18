@@ -30,7 +30,7 @@ class irc_slack (
         cwd         => $source_dir,
         environment => [
             "GOCACHE=${home_dir}/.cache/go-build",
-            "GOHOME=${home_dir}/go",
+            "GOPATH=${home_dir}/go",
         ],
         creates     => "${source_dir}/irc-slack",
         subscribe   => Vcsrepo[$source_dir],
