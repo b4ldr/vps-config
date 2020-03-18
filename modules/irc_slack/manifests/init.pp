@@ -38,13 +38,14 @@ class irc_slack (
         ],
         creates     => "${source_dir}/irc-slack",
         subscribe   => Vcsrepo[$source_dir],
+        notify      => Service['irc-slack'],
     }
     file{'/usr/local/bin/irc-slack':
         ensure  => link,
         target  => "${source_dir}/irc-slack",
         require => Exec['go build']
     }
-    systend::unit{'irc-slack':
+    systend::unit_file{'irc-slack':
         enable  => true,
         active  => true,
         content => template('irc_slack/irc-slack.service.erb'),
