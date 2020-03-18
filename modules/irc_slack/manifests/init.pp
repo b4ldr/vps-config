@@ -14,7 +14,7 @@ class irc_slack (
         system     => true,
     }
     file{$source_dir:
-        emsure => directory,
+        ensure => directory,
         owner  => $user,
     }
     vcsrepo {$source_dir:
