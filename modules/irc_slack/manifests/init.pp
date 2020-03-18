@@ -1,8 +1,12 @@
 # @summary install https://github.com/insomniacslk/irc-slack
 class irc_slack (
-    Stdlib::Unixpath $source_dir = '/usr/local/src/irc-slack',
-    Stdlib::Unixpath $home_dir   = '/var/lib/irc-slack',
-    String           $user       = 'irc-slack',
+    Stdlib::Unixpath    $source_dir  = '/usr/local/src/irc-slack',
+    Stdlib::Unixpath    $home_dir    = '/var/lib/irc-slack',
+    String              $user        = 'irc-slack',
+    Stdlib::IP::Address $listen      = '127.0.0.1',
+    Stdlib::Port        $port        = 6666,
+    Boolean             $debug       = false,
+    Stdlib::Fqdn        $server_name = $facts['networking']['fqdn'],
 ) {
     $source = 'https://github.com/insomniacslk/irc-slack.git'
     ensure_packages(['golang'])
@@ -39,5 +43,10 @@ class irc_slack (
         ensure  => link,
         target  => "${source_dir}/irc-slack",
         require => Exec['go build']
+    }
+    systend::unit{'irc-slack':
+        enable  => true,
+        active  => true,
+        content => template('irc_slack/irc-slack.service.erb'),
     }
 }
