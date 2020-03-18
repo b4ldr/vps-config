@@ -13,12 +13,16 @@ class irc_slack (
         shell      => '/usr/sbin/nologin',
         system     => true,
     }
+    file{$source_dir:
+        emsure => directory,
+        owner  => $user,
+    }
     vcsrepo {$source_dir:
         ensure   => present,
         source   => $source,
         provider => git,
         user     => $user,
-        require  => User[$user],
+        require  => File[$source_dir],
     }
     exec{'go build':
         path      => '/usr/bin',
