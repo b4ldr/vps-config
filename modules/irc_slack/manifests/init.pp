@@ -25,10 +25,15 @@ class irc_slack (
         require  => File[$source_dir],
     }
     exec{'go build -i':
-        path      => '/usr/bin',
-        cwd       => $source_dir,
-        creates   => "${source_dir}/irc-slack",
-        subscribe => Vcsrepo[$source_dir],
+        path        => '/usr/bin',
+        user        => $user,
+        cwd         => $source_dir,
+        environment => [
+            "GOCACHE=${home_dir}/.cache/go-build",
+            "GOHOME=${home_dir}/go",
+        ],
+        creates     => "${source_dir}/irc-slack",
+        subscribe   => Vcsrepo[$source_dir],
     }
     file{'/usr/local/bin/irc-slack':
         ensure  => link,
