@@ -33,6 +33,6 @@ class irc_slack (
     file{'/usr/local/bin/irc-slack':
         ensure  => link,
         target  => "${source_dir}/irc-slack",
-        require => Exec['go build']
+        require => Exec['go build -i']
     }
 }
