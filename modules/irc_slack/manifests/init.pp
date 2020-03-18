@@ -24,7 +24,7 @@ class irc_slack (
         user     => $user,
         require  => File[$source_dir],
     }
-    exec{'go build':
+    exec{'go build -i':
         path      => '/usr/bin',
         cwd       => $source_dir,
         creates   => "${source_dir}/irc-slack",
