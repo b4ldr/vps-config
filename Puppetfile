@@ -6,6 +6,7 @@ mod 'puppetlabs/firewall'
 mod 'puppetlabs-apt'
 mod 'puppetlabs/apache'
 mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs-inifile'
 mod 'camptocamp/systemd'
 mod 'knot',
   :git => 'https://github.com/b4ldr/puppet-knot',
