@@ -45,7 +45,7 @@ class irc_slack (
         target  => "${source_dir}/irc-slack",
         require => Exec['go build']
     }
-    systend::unit_file{'irc-slack':
+    systemd::unit_file{'irc-slack':
         enable  => true,
         active  => true,
         content => template('irc_slack/irc-slack.service.erb'),
