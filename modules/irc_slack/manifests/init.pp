@@ -9,7 +9,7 @@ class irc_slack (
     user {$user:
         ensure     => present,
         home       => $home_dir,
-        fanagehome => true,
+        managehome => true,
         shell      => '/usr/sbin/nologin',
         system     => true,
     }
