@@ -12,4 +12,4 @@ mod 'knot',
   :git => 'https://github.com/b4ldr/puppet-knot',
   :ref => 'remove_tea'
 mod 'knot',
-  :git => 'https://github.com/b4ldr/puppet-irc_slack',
+  :git => 'https://github.com/b4ldr/puppet-irc_slack'
