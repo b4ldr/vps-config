@@ -15,7 +15,7 @@ servers = (
     port = "<%= config.fetch('port', '6697') %>";
     use_tls = "<%= bool2yesno(config.fetch('use_tls', true)) %>";
     tls_verify = "<%= bool2yesno(config.fetch('tls_verify', true)) %>";
-    autoconnect = "<%= bool2yesno(config.fetch('use_tls', true)) %>";
+    autoconnect = "<%= bool2yesno(config.fetch('autoconnect', true)) %>";
   <%- if config.include?('password') -%>
     password = "<%= config['password'] %>";
   <%- end -%>
@@ -48,8 +48,7 @@ chatnets = {
 channels = (
 <%- @servers.each_pair do |chatnet, config| -%>
   <%- config.fetch('channels', {}).each_pair do |channel, chan_config| -%>
-  { chatnet = "<%= chatnet %>"; name = "<%= channel %>"; autojoin = "<%= bool2yesno(chan_config.fetch('autojoin', true)) %>";
-  },
+  { chatnet = "<%= chatnet %>"; name = "<%= channel %>"; autojoin = "<%= bool2yesno(chan_config.fetch('autojoin', true)) %>"; },
   <%- end -%>
 <%- end -%>
 );
