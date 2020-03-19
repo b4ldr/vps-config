@@ -11,5 +11,5 @@ mod 'camptocamp/systemd'
 mod 'knot',
   :git => 'https://github.com/b4ldr/puppet-knot',
   :ref => 'remove_tea'
-mod 'knot',
+mod 'irc_slack',
   :git => 'https://github.com/b4ldr/puppet-irc_slack'
