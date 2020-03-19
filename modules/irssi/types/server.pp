@@ -5,6 +5,7 @@ type Irssi::Server = Struct[{
     tls_verify     => Optional[Boolean],
     autoconnect    => Optional[Boolean],
     username       => Optional[String[1]],
+    password       => Optional[String[1]],
     kicks          => Optional[Integer[1]],
     querychans     => Optional[Integer[1]],
     msgs           => Optional[Integer[1]],

@@ -45,6 +45,12 @@ irssi::user_configs:
         sasl_username: "%{alias('secret::sasl_username')}"
         sasl_password: "%{alias('secret::sasl_password')}"
         channels: "%{alias('secret::channels')}"
+      wikipedia:
+        address: '127.0.0.1'
+        port: 6666
+        tls_verify: false
+        use_tls: false
+        password: "%{alias('secret::slack_token')}"
     perl_script_config:
       awl_shared_sbar: 'OFF'
       awl_viewer: 'yes'
