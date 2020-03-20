@@ -1,3 +1,5 @@
+irc_slack::source: https://github.com/b4ldr/irc-slack
+irc_slack::branch: loglevel
 knot::ip_addresses:
   - "%{facts.networking.ip}"
   - "%{facts.networking.ip6}"
