@@ -123,3 +123,4 @@ irssi::user_configs:
         source: 'puppet:///modules/irssi/tmux_away.pl'
     extra_aliases:
       A: 'toggle awl_viewer'
+      WG: 'window goto'
