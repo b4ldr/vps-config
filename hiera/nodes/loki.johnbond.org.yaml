@@ -42,12 +42,11 @@ irssi::user_configs:
         address:  irc.ripe.net
         tls_verify: false
         port: 6667
-        username: balder
+        username: 'balder'
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
-        username: balder-14907
-      terahertz:
+        username: 'balder-14907'
       freenode:
         address: 'chat.freenode.net'
         sasl_mechanism: 'PLAIN'
