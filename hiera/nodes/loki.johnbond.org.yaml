@@ -40,9 +40,6 @@ irssi::user_configs:
     servers:
       ripe:
         address:  irc.ripe.net
-        tls_verify: false
-        use_tls: false
-        port: 6667
         username: 'balder'
       terahertz:
         address: 'irc.terahertz.net'
