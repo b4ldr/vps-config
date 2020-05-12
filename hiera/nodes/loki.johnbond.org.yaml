@@ -38,9 +38,16 @@ irssi::user_configs:
     user_name: 'jbond42'
     nick: 'jbond42'
     servers:
+      ripe:
+        address:  irc.ripe.net
+        tls_verify: false
+        port: 6667
+        username: balder
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
+        username: balder-14907
+      terahertz:
       freenode:
         address: 'chat.freenode.net'
         sasl_mechanism: 'PLAIN'
