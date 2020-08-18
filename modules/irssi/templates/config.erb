@@ -74,6 +74,11 @@ settings = {
   "fe-common/core" = {
     theme = "<%= @theme %>";
     term_charset = "<%= @term_charset %>";
+    autolog = "<%= bool2yesno(@autolog) %>";
+    autolog_path = "<%= @autolog_level %>";
+<%- unless @autolog_level.empty? -%>
+    autolog_level = "<%= @autolog_level.join(' ') %>"
+<%- end -%>
   };
   "perl/core/scripts" = {
 <%- @perl_script_config.each_pair do |config, setting| -%>
