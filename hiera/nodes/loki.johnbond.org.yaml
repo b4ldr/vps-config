@@ -41,6 +41,7 @@ irssi::user_configs:
     real_name: 'John Bond'
     user_name: 'jbond42'
     nick: 'jbond42'
+    autolog: true
     servers:
       ripe:
         address:  irc.ripe.net
