@@ -46,6 +46,8 @@ irssi::user_configs:
       ripe:
         address:  irc.ripe.net
         username: 'balder'
+      oftc:
+        address:  irc.oftc.net
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
