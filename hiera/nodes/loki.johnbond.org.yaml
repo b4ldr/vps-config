@@ -26,6 +26,7 @@ dns::zones:
   - mariposita.uk
   - melcbond.com
   - regbond.com
+  - kotonohabloom.com
 apache::default_vhost: false
 http::vhosts:
   attackplanner.co.uk:
