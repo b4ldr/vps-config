@@ -26,6 +26,7 @@ dns::zones:
   - mariposita.uk
   - melcbond.com
   - regbond.com
+  - kotonohabloom.com
 apache::default_vhost: false
 http::vhosts:
   attackplanner.co.uk:
@@ -46,6 +47,8 @@ irssi::user_configs:
       ripe:
         address:  irc.ripe.net
         username: 'balder'
+      oftc:
+        address:  irc.oftc.net
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
