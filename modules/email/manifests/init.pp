@@ -8,7 +8,7 @@ class email (
     Hash             $domains        = {},
 ) {
     ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot-imapd', 'sasl2-bin'])
-    ensure_packages(['cetbot'])
+    ensure_packages(['certbot'])
     file{[$tls_cert, $tls_key]:
         ensure => present,
         mode   => '0640',
