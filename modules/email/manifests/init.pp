@@ -11,6 +11,7 @@ class email (
     ensure_packages(['certbot'])
     file{[$tls_cert, $tls_key]:
         ensure => present,
+        links  => 'follow',
         mode   => '0640',
         group  => 'Debian-exim',
     }
