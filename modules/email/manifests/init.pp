@@ -9,7 +9,7 @@ class email (
 ) {
     ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot-imapd', 'sasl2-bin'])
     ensure_packages(['cetbot'])
-    file{[$tls_crt, $tls_key]:
+    file{[$tls_cert, $tls_key]:
         ensure => present,
         mode   => '0640',
         group  => 'Debian-exim',
