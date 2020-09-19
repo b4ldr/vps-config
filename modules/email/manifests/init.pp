@@ -1,13 +1,20 @@
 #
 class email (
     Stdlib::Unixpath $virtual_dir    = '/etc/exim4/virtual_dir',
-    Stdlib::Unixpath $tls_cert       = '/etc/ssl/certs/imaps.johnbond.org.pem',
-    Stdlib::Unixpath $tls_key        = '/etc/ssl/private/imaps.johnbond.org.key',
+    Stdlib::Unixpath $tls_cert       = '/etc/letsencrypt/live/imaps.johnbond.org/fullchain.pem',
+    Stdlib::Unixpath $tls_key        = '/etc/letsencrypt/live/imaps.johnbond.org/privkey.pem',
     Stdlib::Unixpath $dkim_key       = '/etc/ssl/private/dkim.key',
     Stdlib::Host     $qualify_domain = 'johnbond.org',
     Hash             $domains        = {},
 ) {
     ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot-imapd', 'sasl2-bin'])
+    ensure_packages(['cetbot'])
+    file{[$tls_crt, $tls_key]:
+        ensure => present,
+        mode   => '0640',
+        group  => 'Debian-exim',
+    }
+
     file { '/etc/exim4/exim4.conf':
         ensure  => file,
         group   => 'Debian-exim',
@@ -61,5 +68,10 @@ class email (
                 provider => $provider,
             }
         }
+    }
+    cron {'certbot_exim':
+        command => "/usr/bin/certbot renew --post-hook 'systemctl restart exim4'",
+        minute  => 0,
+        hour    => 11,
     }
 }
