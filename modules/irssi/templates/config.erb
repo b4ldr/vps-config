@@ -20,10 +20,10 @@ servers = (
     password = "<%= config['password'] %>";
   <%- end -%>
   <%- if config.include?('username') -%>
-    password = "<%= config['username'] %>";
+    username = "<%= config['username'] %>";
   <%- end -%>
   <%- if config.include?('tls_cert') -%>
-    password = "<%= config['tls_cert'] %>";
+    tls_cert = "<%= config['tls_cert'] %>";
   <%- end -%>
   },
 <%- end -%>
