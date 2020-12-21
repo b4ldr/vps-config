@@ -54,7 +54,7 @@ irssi::user_configs:
         password: "%{alias('secret::oftc_pass')}"
         channels:
           '#debian-puppet': {}
-          '#debian-closure': {}
+          '#debian-clojure': {}
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
