@@ -53,8 +53,8 @@ irssi::user_configs:
         username: jbond
         password: "%{alias('secret::oftc_pass')}"
         channels:
-          - '#debian-puppet'
-          - '#debian-closure'
+          '#debian-puppet': {}
+          '#debian-closure': {}
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
