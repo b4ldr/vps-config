@@ -52,6 +52,9 @@ irssi::user_configs:
         tls_cert: '~/.irssi/certs/oftc.pem'
         username: jbond
         password: "%{alias('secret::oftc_pass')}"
+        channels:
+          - '#debian-puppet'
+          - '#debian-closure'
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false
