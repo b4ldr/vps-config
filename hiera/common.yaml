@@ -64,7 +64,7 @@ my_fw::pre::rules:
     dport: 22
     action: 'accept'
     provider: ip6tables
-  '004 accept':
+  '004 accept ipv6':
     proto: 'tcp'
     dport: 4242
     action: 'accept'
