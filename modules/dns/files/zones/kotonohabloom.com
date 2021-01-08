@@ -11,5 +11,6 @@ $TTL 1h ; Set TTL to one hour for all important RRsets
 	NS	ns1.he.net.
 
 	MX	10 loki.johnbond.org.
-
+    
 $TTL 6h ; Set TTL for other RRsets to 6 hours
+www CNAME heikar.dreamhosters.com.
