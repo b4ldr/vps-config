@@ -19,6 +19,12 @@ servers = (
   <%- if config.include?('password') -%>
     password = "<%= config['password'] %>";
   <%- end -%>
+  <%- if config.include?('username') -%>
+    username = "<%= config['username'] %>";
+  <%- end -%>
+  <%- if config.include?('tls_cert') -%>
+    tls_cert = "<%= config['tls_cert'] %>";
+  <%- end -%>
   },
 <%- end -%>
 );

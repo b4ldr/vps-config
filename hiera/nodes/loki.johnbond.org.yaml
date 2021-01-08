@@ -48,7 +48,13 @@ irssi::user_configs:
         address:  irc.ripe.net
         username: 'balder'
       oftc:
-        address:  irc.oftc.net
+        address:  'irc.oftc.net'
+        tls_cert: '~/.irssi/certs/oftc.pem'
+        username: jbond
+        password: "%{alias('secret::oftc_pass')}"
+        channels:
+          '#debian-puppet': {}
+          '#debian-clojure': {}
       terahertz:
         address: 'irc.terahertz.net'
         tls_verify: false

@@ -36,7 +36,11 @@ my_fw::pre::rules:
     proto: 'tcp'
     dport: 22
     action: 'accept'
-  '004 accept related established rules':
+  '004 accept':
+    proto: 'tcp'
+    dport: 4242
+    action: 'accept'
+  '005 accept related established rules':
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
     action: 'accept'
@@ -60,7 +64,12 @@ my_fw::pre::rules:
     dport: 22
     action: 'accept'
     provider: ip6tables
-  '004 accept related established rules ipv6':
+  '004 accept ipv6':
+    proto: 'tcp'
+    dport: 4242
+    action: 'accept'
+    provider: ip6tables
+  '005 accept related established rules ipv6':
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
     action: 'accept'

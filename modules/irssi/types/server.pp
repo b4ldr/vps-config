@@ -3,6 +3,7 @@ type Irssi::Server = Struct[{
     port           => Optional[Stdlib::Port],
     use_tls        => Optional[Boolean],
     tls_verify     => Optional[Boolean],
+    tls_cert       => Optional[String[1]],
     autoconnect    => Optional[Boolean],
     username       => Optional[String[1]],
     password       => Optional[String[1]],
