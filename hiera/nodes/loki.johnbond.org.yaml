@@ -65,7 +65,8 @@ http::vhosts:
       ssl: true
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
-      custom_fragment: "DumpIOInput On\n\tDumpIOOutput On\n\t DumpIOLogLevel notice"
+      log_level: debug
+      custom_fragment: "DumpIOInput On\n  DumpIOOutput On"
     headers:
       'Access-Control-Allow-Origin': "*"
 irssi::user_configs:
