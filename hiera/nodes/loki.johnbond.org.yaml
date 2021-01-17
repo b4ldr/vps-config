@@ -52,7 +52,7 @@ http::vhosts:
   nel.johnbond.org:
     apache:
       port: 443
-      ssl: true,
+      ssl: true
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
 irssi::user_configs:
