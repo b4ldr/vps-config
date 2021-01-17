@@ -13,8 +13,8 @@ class http (
                 $value = $header[1] ? {
                     String  => $header[1],
                     default => $header[1].to_json(),
-                }
-                "set ${header[0]} ${value}"
+                }.regsubst('"', '\\"', 'G')
+                "set ${header[0]} \"${value}\""
             }
         } else {
             $headers = []
