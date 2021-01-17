@@ -7,6 +7,7 @@ class http (
         ensure => directory,
     }
     include apache
+    include apache::mod::dumpio
     $vhosts.each |$vhost, $config| {
         if $config.has_key('headers') {
             $headers = $config['headers'].map |$header| {
