@@ -29,7 +29,7 @@ dns::zones:
   - kotonohabloom.com
 apache::default_vhost: false
 http::vhosts:
-  attackplanner.co.uk:
+  attackplanner.co.uk_clear:
     apache:
       serveraliases: www.attackplanner.co.uk
       docroot: /srv/http/attackplanner.co.uk
