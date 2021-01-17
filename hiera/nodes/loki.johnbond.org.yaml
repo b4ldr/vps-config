@@ -68,6 +68,8 @@ http::vhosts:
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
       priority: '01'
+      protocols:
+        - h2
     headers:
       'access-control-allow-origin': '*'
       'access-control-allow-headers': 'Content-Type'
