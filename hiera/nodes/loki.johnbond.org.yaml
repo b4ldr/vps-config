@@ -38,7 +38,7 @@ http::vhosts:
         group: nelly
         max_age: 86400
         endpoints:
-          - url: https://nel.johnbond.org
+          - url: https://nel.johnbond.org/upload
       NEL:
         report_to: nelly
         max_age: 86400
