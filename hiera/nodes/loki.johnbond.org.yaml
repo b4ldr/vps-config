@@ -70,8 +70,8 @@ http::vhosts:
       priority: '01'
     headers:
       'access-control-allow-origin': '*'
-      'access-control-allow-headers': '*'
-      'access-control-allow-methods': '*'
+      'access-control-allow-headers': 'Content-Type'
+      'access-control-allow-methods': 'POST'
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'
