@@ -37,6 +37,8 @@ http::vhosts:
     apache:
       serveraliases: www.johnbond.org
       redirect_dest: https://b4ldr.wordpress.com/
+  nel.johnbond.org:
+    apache: {}
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'
