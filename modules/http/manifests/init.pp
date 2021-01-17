@@ -9,7 +9,7 @@ class http (
     include apache
     $vhosts.each |$vhost, $config| {
         if $config.has_key('headers') {
-            $config['headers'].map |$header| {
+            $headers = $config['headers'].map |$header| {
                 $value = $header[1] ? {
                     String  => $header[1],
                     default => $header[1].to_json(),
