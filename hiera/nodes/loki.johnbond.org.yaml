@@ -28,6 +28,8 @@ dns::zones:
   - regbond.com
   - kotonohabloom.com
 apache::default_vhost: false
+apache::dump_io_input: 'On'
+apache::dump_io_output: 'On'
 http::vhosts:
   attackplanner.co.uk_clear:
     apache:
@@ -66,7 +68,6 @@ http::vhosts:
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
       log_level: dumpio:trace7
-      custom_fragment: "DumpIOInput On\n  DumpIOOutput On"
     headers:
       'Access-Control-Allow-Origin': "*"
 irssi::user_configs:
