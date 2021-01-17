@@ -65,6 +65,8 @@ http::vhosts:
       ssl: true
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
+    headers:
+      'Access-Control-Allow-Origin': "*"
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'
