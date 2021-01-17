@@ -64,6 +64,7 @@ http::vhosts:
     git_source: https://github.com/b4ldr/simple-flask-nel
     apache:
       port: 443
+      gitroot: /srv/http/nel.johnbond.org
       docroot: /srv/http/nel.johnbond.org/docroot
       ssl: true
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem

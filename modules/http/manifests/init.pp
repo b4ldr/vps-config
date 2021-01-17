@@ -31,7 +31,7 @@ class http (
         }
         $_config = $default + $config['apache']
         if $config.has_key('git_source') {
-            vcsrepo {$_config['docroot']:
+            vcsrepo {pick($config['gitroot'], $_config['docroot']):
                 ensure   => latest,
                 provider => git,
                 source   => $config['git_source'],
