@@ -33,18 +33,18 @@ http::vhosts:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
       serveraliases: www.attackplanner.co.uk
-      headers:
-        'report-to':
-          group: nelly
-          max_age: 86400
-          endpoints:
-            - url: https://nel.johnbond.org
-        NEL:
-          report_to: nelly
-          max_age: 86400
-          include_subdomains: true
-          failure_fraction: 1.0
-          success_fraction: 1.0
+    headers:
+      'report-to':
+        group: nelly
+        max_age: 86400
+        endpoints:
+          - url: https://nel.johnbond.org
+      NEL:
+        report_to: nelly
+        max_age: 86400
+        include_subdomains: true
+        failure_fraction: 1.0
+        success_fraction: 1.0
   johnbond.org:
     apache:
       serveraliases: www.johnbond.org
