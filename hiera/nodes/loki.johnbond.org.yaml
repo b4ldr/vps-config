@@ -69,8 +69,9 @@ http::vhosts:
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
       priority: '01'
     headers:
-      'Access-Control-Allow-Origin': "*"
-      'access-control-allow-headers': 'content-type'
+      'access-control-allow-origin': '*'
+      'access-control-allow-headers': '*'
+      'access-control-allow-methods': '*'
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'
