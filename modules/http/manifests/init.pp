@@ -4,6 +4,7 @@ class http (
     Stdlib::Unixpath $docroot_base = '/srv/http',
     Boolean          $dumpio       = false,
 ){
+    ensure_packages(['python3-flask'])
     file {$docroot_base:
         ensure => directory,
     }
