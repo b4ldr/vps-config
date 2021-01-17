@@ -24,7 +24,7 @@ class http (
             'port'    => '80',
             'headers' => $headers,
         }
-        $_config = $config['apache'] + $default
+        $_config = $default + $config['apache']
         if $config.has_key('git_source') {
             vcsrepo {$_config['docroot']:
                 ensure   => latest,
