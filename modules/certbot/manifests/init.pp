@@ -5,7 +5,7 @@ class certbot {
         minute  => 0,
         hour    => 11,
     }
-    cron {'certbot_exim':
+    cron {'certbot_apache':
         command => "/usr/bin/certbot certonly --apache -d nel.johnbond.org",
         minute  => 0,
         hour    => 12,
