@@ -50,7 +50,11 @@ http::vhosts:
       serveraliases: www.johnbond.org
       redirect_dest: https://b4ldr.wordpress.com/
   nel.johnbond.org:
-    apache: {}
+    apache:
+      port: 443
+      ssl: true,
+      ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
+      ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'

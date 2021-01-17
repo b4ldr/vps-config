@@ -8,7 +8,6 @@ class email (
     Hash             $domains        = {},
 ) {
     ensure_packages(['exim4-daemon-heavy', 'procmail', 'dovecot-imapd', 'sasl2-bin'])
-    ensure_packages(['certbot'])
     file{[$tls_cert, $tls_key]:
         ensure => present,
         links  => 'follow',
@@ -69,10 +68,5 @@ class email (
                 provider => $provider,
             }
         }
-    }
-    cron {'certbot_exim':
-        command => "/usr/bin/certbot renew --post-hook 'systemctl restart exim4'",
-        minute  => 0,
-        hour    => 11,
     }
 }
