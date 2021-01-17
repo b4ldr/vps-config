@@ -29,6 +29,7 @@ dns::zones:
 apache::default_vhost: false
 apache::mod::dumpio::dump_io_input: 'On'
 apache::mod::dumpio::dump_io_output: 'On'
+apache::mod::wsgi::package_name: libapache2-mod-wsgi-py3
 http::vhosts:
   attackplanner.co.uk_clear:
     apache:
