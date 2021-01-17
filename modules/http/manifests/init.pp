@@ -41,7 +41,7 @@ class http (
         }
     }
     ['iptables', 'ip6tables'].each |String $provider| {
-        ['80'].each |String $port| {
+        ['80', '443'].each |String $port| {
             firewall {"103 HTTP ${provider} ${port}":
                 proto    => 'tcp',
                 dport    => $port,
