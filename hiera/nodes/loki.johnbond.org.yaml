@@ -86,7 +86,7 @@ http::vhosts:
         application-group: '%%{}{GLOBAL}'
       wsgi_process_group: 'wsgi'
       wsgi_script_aliases:
-        '/': "%{alias('wsgi_import_script')}"
+        '/': /srv/http/nel.johnbond.org/wsgi.py
     headers:
       'access-control-allow-origin': '*'
       'access-control-allow-headers': 'Content-Type'
