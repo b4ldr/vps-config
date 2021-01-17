@@ -2,12 +2,15 @@
 class http (
     Hash             $vhosts,
     Stdlib::Unixpath $docroot_base = '/srv/http',
+    Boolean          $dumpio       = false,
 ){
     file {$docroot_base:
         ensure => directory,
     }
     include apache
-    include apache::mod::dumpio
+    if $dumpio {
+        include apache::mod::dumpio
+    }
     $vhosts.each |$vhost, $config| {
         if $config.has_key('headers') {
             $headers = $config['headers'].map |$header| {
