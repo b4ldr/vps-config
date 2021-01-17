@@ -30,9 +30,19 @@ dns::zones:
 apache::default_vhost: false
 http::vhosts:
   attackplanner.co.uk:
+    apache:
+      serveraliases: www.attackplanner.co.uk
+      docroot: /srv/http/attackplanner.co.uk
+      redirect_status: 'permanent'
+      redirect_dest: https://attackplanner.co.uk
+  attackplanner.co.uk:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
       serveraliases: www.attackplanner.co.uk
+      port: 443
+      ssl: true
+      ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk/fullchain.pem
+      ssl_key: /etc/letsencrypt/live/attackplanner.co.uk/privkey.pem
     headers:
       'report-to':
         group: nelly
