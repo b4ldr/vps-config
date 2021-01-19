@@ -21,6 +21,7 @@ base::users:
       key: 'AAAAC3NzaC1lZDI1NTE5AAAAIKWgKgk0wUrZkapYfUq57G5o7gkVWM+FzsHOEnT9hQpA'
   traut:
     user:
+      shell: /bin/bash
       groups:
         - nelly
       managehome: true
