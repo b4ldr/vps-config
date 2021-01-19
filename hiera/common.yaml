@@ -19,6 +19,16 @@ base::users:
       ensure: present
       type: ssh-ed25519
       key: 'AAAAC3NzaC1lZDI1NTE5AAAAIKWgKgk0wUrZkapYfUq57G5o7gkVWM+FzsHOEnT9hQpA'
+  traut:
+    user:
+      groups:
+        - nelly
+      managehome: true
+      membership: minimum
+    ssh_authorized_key:
+      ensure: present
+      type: ssh-rsa
+      key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDOkLAB4iTV8Lmuq7bDkZRDBwVTPuguMh1rxdDLC2v2sAtozbAEgsBQCOuGsh1kV9I86A1QX6DPkfXWx+rOxfvGU6V/h2eT+ubTZ8vqVljbtwgEk6KF5eoBwKs4MCvcdnyrI/4GMa+xoH0W8H8WYP1LbDfM0DpFmuXMIL7JQkZXvF3W4ZXkCt1AqSebek5BjqnnqA1Kvx653Awzz//T+YoRoA5PtmDcPin6/vHh7APLZn6Ulvkofi4/izRZf9Q+u7evzZHldU0vJ4OqIkL6j3x2YFckaNzaV+nfY6jNxs4j2IXrg1wdXJkrB2iOp+iCtbwnpmZlkdp3RvIFOuvw5xih'
 my_fw::pre::rules:
   '000 accept all icmp':
     proto: 'icmp'

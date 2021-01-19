@@ -68,6 +68,7 @@ http::vhosts:
     apache:
       port: 443
       docroot: /srv/http/nel.johnbond.org/docroot
+      group: nelly
       ssl: true
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
