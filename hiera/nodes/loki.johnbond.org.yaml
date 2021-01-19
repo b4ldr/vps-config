@@ -48,7 +48,7 @@ http::vhosts:
       ssl_key: /etc/letsencrypt/live/attackplanner.co.uk/privkey.pem
     headers:
       'report-to':
-        group: nelly
+        docroot_group: nelly
         max_age: 86400
         endpoints:
           - url: https://nel.johnbond.org/upload
