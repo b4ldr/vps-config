@@ -1,4 +1,9 @@
 #!/bin/sh
+if [ -f /var/tmp/disable_puppet ]
+then
+  echo 'puppet disabled'
+  exit 1
+fi
 code_dir=/etc/puppet/code/production
 cd "${code_dir}" || exit 1
 git_output=$(/usr/bin/git pull)

@@ -18,7 +18,6 @@ dns::zones:
   - johnbond.org
   - attackplanner.co.uk
   - doggyholidayhome.com
-  - john-bond.co.uk
   - john-bond.org.uk
   - johnbond.org.uk
   - mandybond.com
@@ -28,15 +27,71 @@ dns::zones:
   - regbond.com
   - kotonohabloom.com
 apache::default_vhost: false
+apache::mod::dumpio::dump_io_input: 'On'
+apache::mod::dumpio::dump_io_output: 'On'
+apache::mod::wsgi::package_name: libapache2-mod-wsgi-py3
+apache::mod::wsgi::mod_path: /usr/lib/apache2/modules/mod_wsgi.so
 http::vhosts:
+  attackplanner.co.uk_clear:
+    apache:
+      serveraliases: www.attackplanner.co.uk
+      docroot: /srv/http/attackplanner.co.uk
+      redirect_status: 'permanent'
+      redirect_dest: https://attackplanner.co.uk
   attackplanner.co.uk:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
       serveraliases: www.attackplanner.co.uk
+      port: 443
+      ssl: true
+      ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk/fullchain.pem
+      ssl_key: /etc/letsencrypt/live/attackplanner.co.uk/privkey.pem
+    headers:
+      'report-to':
+        group: nelly
+        max_age: 86400
+        endpoints:
+          - url: https://nel.johnbond.org/upload
+      nel:
+        report_to: nelly
+        max_age: 86400
+        include_subdomains: true
+        failure_fraction: 1.0
+        success_fraction: 1.0
   johnbond.org:
     apache:
       serveraliases: www.johnbond.org
       redirect_dest: https://b4ldr.wordpress.com/
+  nel.johnbond.org:
+    git_source: https://github.com/b4ldr/simple-flask-nel
+    gitroot: /srv/http/nel.johnbond.org
+    apache:
+      port: 443
+      docroot: /srv/http/nel.johnbond.org/docroot
+      docroot_group: nelly
+      ssl: true
+      ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
+      ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
+      priority: '01'
+      protocols:
+        - h2
+      wsgi_application_group: '%%{}{GLOBAL}'
+      wsgi_daemon_process:
+        wsgi:
+          processes: '2'
+          threads: '15'
+          display-name: '%%{}{GROUP}'
+      wsgi_import_script: /srv/http/nel.johnbond.org/wsgi.py
+      wsgi_import_script_options:
+        process-group: 'wsgi'
+        application-group: '%%{}{GLOBAL}'
+      wsgi_process_group: 'wsgi'
+      wsgi_script_aliases:
+        '/': /srv/http/nel.johnbond.org/wsgi.py
+    headers:
+      'access-control-allow-origin': '*'
+      'access-control-allow-headers': 'Content-Type'
+      'access-control-allow-methods': 'POST'
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'
