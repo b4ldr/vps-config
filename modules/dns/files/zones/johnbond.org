@@ -31,3 +31,4 @@ loki IN A 206.189.25.239
 loki IN AAAA 2a03:b0c0:1:e0::4f7:f001
 imaps IN A 206.189.25.239
 imaps IN AAAA 2a03:b0c0:1:e0::4f7:f001
+baldr IN A 185.143.92.17
