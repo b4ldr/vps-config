@@ -1,7 +1,7 @@
 $TTL 1h ; Set TTL to one hour for all important RRsets
 
 @	SOA	ns.johnbond.org. dns.johnbond.org. (
-		2021011601 ; Serial
+		2021012501 ; Serial
 		1h ; Refresh
 		10m ; Retry
 		10d; Expire
@@ -31,9 +31,6 @@ loki IN A 206.189.25.239
 loki IN AAAA 2a03:b0c0:1:e0::4f7:f001
 imaps IN A 206.189.25.239
 imaps IN AAAA 2a03:b0c0:1:e0::4f7:f001
-<<<<<<< HEAD
 baldr IN A 185.143.92.17
-=======
 nel IN A 206.189.25.239
 nel IN AAAA 2a03:b0c0:1:e0::4f7:f001
->>>>>>> 5b387b7804b2d264b689f0c41f2436e4b7d3f21a
