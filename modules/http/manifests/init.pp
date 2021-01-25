@@ -35,6 +35,7 @@ class http (
                 ensure   => latest,
                 provider => git,
                 source   => $config['git_source'],
+                notify   => Service[$apache::service_name],
             }
         } else {
             file {$_config['docroot']:
