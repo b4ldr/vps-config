@@ -8,5 +8,4 @@ node 'loki.johnbond.org' {
     include email
     include http
     include irssi
-    include irc_slack
 }
