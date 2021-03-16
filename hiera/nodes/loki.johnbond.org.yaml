@@ -35,7 +35,7 @@ http::vhosts:
       serveraliases: www.attackplanner.co.uk
       docroot: /srv/http/attackplanner.co.uk
       redirect_status: 'permanent'
-      redirect_dest: https://attackplanner.co.uk
+      redirect_dest: https://attackplanner.co.uk/
   attackplanner.co.uk:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
