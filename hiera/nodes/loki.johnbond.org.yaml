@@ -1,4 +1,4 @@
-knot::ip_addresses:
+not::ip_addresses:
   - "%{facts.networking.ip}"
   - "%{facts.networking.ip6}"
 knot::remotes:
@@ -31,19 +31,22 @@ apache::mod::dumpio::dump_io_output: 'On'
 apache::mod::wsgi::package_name: libapache2-mod-wsgi-py3
 apache::mod::wsgi::mod_path: /usr/lib/apache2/modules/mod_wsgi.so
 http::vhosts:
-  attackplanner.co.uk_clear:
+  attackplanner.com_clear:
     apache:
       serveraliases:
         - www.attackplanner.co.uk
         - www.attackplanner.com
-        - attackplanner.com
+        - attackplanner.co.uk
       docroot: /srv/http/attackplanner.co.uk
       redirect_status: 'permanent'
       redirect_dest: https://attackplanner.co.uk/
-  attackplanner.co.uk:
+  attackplanner.com:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
-      serveraliases: www.attackplanner.co.uk
+      serveraliases:
+        - www.attackplanner.co.uk
+        - www.attackplanner.com
+        - attackplanner.co.uk
       port: 443
       ssl: true
       ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk/fullchain.pem
