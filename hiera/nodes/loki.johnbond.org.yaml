@@ -15,6 +15,7 @@ dns::zones_dir: 'puppet:///modules/dns/zones'
 dns::zones:
   - johnbond.org
   - attackplanner.co.uk
+  - attackplanner.com
   - doggyholidayhome.com
   - john-bond.org.uk
   - johnbond.org.uk
@@ -32,7 +33,10 @@ apache::mod::wsgi::mod_path: /usr/lib/apache2/modules/mod_wsgi.so
 http::vhosts:
   attackplanner.co.uk_clear:
     apache:
-      serveraliases: www.attackplanner.co.uk
+      serveraliases:
+        - www.attackplanner.co.uk
+        - www.attackplanner.com
+        - attackplanner.com
       docroot: /srv/http/attackplanner.co.uk
       redirect_status: 'permanent'
       redirect_dest: https://attackplanner.co.uk/
