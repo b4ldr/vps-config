@@ -125,7 +125,7 @@ irssi::user_configs:
         sasl_username: "%{alias('secret::sasl_username')}"
         sasl_password: "%{alias('secret::sasl_password')}"
         channels: "%{alias('secret::channels')}"
-      freenode:
+      libera:
         address: 'irc.libera.chat'
         sasl_mechanism: 'PLAIN'
         sasl_username: "%{alias('secret::sasl_username')}"
