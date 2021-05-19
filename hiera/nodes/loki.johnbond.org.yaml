@@ -131,7 +131,7 @@ irssi::user_configs:
         sasl_mechanism: 'PLAIN'
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
-        #channels: "%{alias('secret::channels')}"
+        channels: "%{alias('secret::channels')}"
     perl_script_config:
       awl_shared_sbar: 'OFF'
       awl_viewer: 'yes'
