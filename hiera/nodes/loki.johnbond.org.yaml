@@ -107,6 +107,7 @@ irssi::user_configs:
       ripe:
         address:  irc.ripe.net
         username: 'balder'
+        tls_verify: false
       oftc:
         address:  'irc.oftc.net'
         tls_cert: '~/.irssi/certs/oftc.pem'
