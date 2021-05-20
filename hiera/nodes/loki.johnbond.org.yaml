@@ -132,6 +132,8 @@ irssi::user_configs:
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::channels')}"
+      wmf:
+        address: irc.wikimedia.org
     perl_script_config:
       awl_shared_sbar: 'OFF'
       awl_viewer: 'yes'
