@@ -104,10 +104,6 @@ irssi::user_configs:
     nick: 'jbond42'
     autolog: true
     servers:
-      ripe:
-        address:  irc.ripe.net
-        username: 'balder'
-        tls_verify: false
       oftc:
         address:  'irc.oftc.net'
         tls_cert: '~/.irssi/certs/oftc.pem'
@@ -120,17 +116,19 @@ irssi::user_configs:
         address: 'irc.terahertz.net'
         tls_verify: false
         username: 'balder-14907'
-      freenode:
-        address: 'chat.freenode.net'
-        sasl_mechanism: 'PLAIN'
-        sasl_username: "%{alias('secret::sasl_username')}"
-        sasl_password: "%{alias('secret::sasl_password')}"
-        channels: "%{alias('secret::channels')}"
+        channels:
+          '#ix': ()
       libera:
         address: 'irc.libera.chat'
         sasl_mechanism: 'PLAIN'
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
+        channels: "%{alias('secret::libera_channels')}"
+      freenode:
+        address: 'chat.freenode.net'
+        sasl_mechanism: 'PLAIN'
+        sasl_username: "%{alias('secret::sasl_username')}"
+        sasl_password: "%{alias('secret::sasl_password')}"
         channels: "%{alias('secret::channels')}"
       wmf:
         address: irc.wikimedia.org
