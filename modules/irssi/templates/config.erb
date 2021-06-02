@@ -120,7 +120,16 @@ hilights = (
   {
     text = "<%= name %>";
   <%- if hilight.has_key?('highlight') -%>
-    <%= hilight['highlight'] %> = "yes";
+    <%# irssi config is strange %>
+    <%- if hilight['highlight'] == 'line' -%>
+    nick = "no";
+    word = "no";
+    <%- else -%>
+    nick = "yes";
+      <%- if hilight['highlight'] == 'word' -%>
+    word = "yes";
+      <%- end -%>
+    <%- end -%>
   <%- end -%>
   <%- if hilight.has_key?('match') -%>
     <%= hilight['match'] %> = "yes";
