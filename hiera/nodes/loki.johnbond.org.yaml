@@ -100,8 +100,8 @@ http::vhosts:
 irssi::user_configs:
   jbond:
     real_name: 'John Bond'
-    user_name: 'jbond42'
-    nick: 'jbond42'
+    user_name: 'jbond'
+    nick: 'jbond'
     autolog: true
     servers:
       oftc:
@@ -124,12 +124,12 @@ irssi::user_configs:
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
-      freenode:
-        address: 'chat.freenode.net'
-        sasl_mechanism: 'PLAIN'
-        sasl_username: "%{alias('secret::sasl_username')}"
-        sasl_password: "%{alias('secret::sasl_password')}"
-        channels: "%{alias('secret::channels')}"
+      #freenode:
+      #  address: 'chat.freenode.net'
+      #  sasl_mechanism: 'PLAIN'
+      #  sasl_username: "%{alias('secret::sasl_username')}"
+      #  sasl_password: "%{alias('secret::sasl_password')}"
+      #  channels: "%{alias('secret::channels')}"
       wmf:
         address: irc.wikimedia.org
         use_tls: false
@@ -173,6 +173,21 @@ irssi::user_configs:
       jbond:
         nick: true
         word: true
+        matchcase: true
+      Jbond:
+        color: '%C'
+        nick: true
+        word: true
+        matchcase: true
+        channels:
+          - '#wikimedia-operations'
+      Muehlenhoff:
+        color: '%c'
+        nick: true
+        word: true
+        matchcase: true
+        channels:
+          - '#wikimedia-operations'
       '14907':
         nick: false
         word: false
