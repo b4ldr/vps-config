@@ -148,7 +148,7 @@ hilights = (
   <%- if hilight.has_key?('channels') -%>
     channels = (
     <%- hilight['channels'].each do |channel| -%>
-      "<%= channel %>"
+      "<%= channel %>",
     <%- end -%>
     );
   <%- end -%>

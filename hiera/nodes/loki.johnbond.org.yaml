@@ -170,7 +170,7 @@ irssi::user_configs:
         level:
           - ALL
     hilights:
-      '\\sjbond\\s':
+      '\\bjbond\\b':
         highlight: 'word'
         regexp: true
         matchcase: true
@@ -180,18 +180,21 @@ irssi::user_configs:
         matchcase: true
         channels:
           - '#wikimedia-operations'
+          - '#foobar1'
       Jbond:
         color: '%G'
         highlight: 'word'
         matchcase: true
         channels:
           - '#wikimedia-operations'
+          - '#foobar1'
       Muehlenhoff:
         color: '%g'
         highlight: 'word'
         matchcase: true
         channels:
           - '#wikimedia-operations'
+          - '#foobar1'
       '14907':
         highlight: 'word'
         servertag: terahertz
