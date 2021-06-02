@@ -128,7 +128,10 @@ hilights = (
     color = "<%= hilight['color'] %>";
   <%- end -%>
   <%- if hilight.has_key?('matchcase') -%>
-    regexp = "<%= bool2yesno(hilight['matchcase']) %>";
+     matchcase = "<%= bool2yesno(hilight['matchcase']) %>";
+  <%- end -%>
+  <%- if hilight.has_key?('regexp') -%>
+     regexp = "<%= bool2yesno(hilight['regexp']) %>";
   <%- end -%>
   <%- if hilight.has_key?('channels') -%>
     channels = (
