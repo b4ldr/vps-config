@@ -119,19 +119,20 @@ hilights = (
 <%- @hilights.each_pair do |name, hilight| -%>
   {
     text = "<%= name %>";
-    nick = "<%= bool2yesno(hilight['nick']) %>";
-    word = "<%= bool2yesno(hilight['word']) %>";
+  <%- if hilight.has_key?('highlight') -%>
+    <%= hilight['highlight'] %>" = "yes";
+  <%- end -%>
+  <%- if hilight.has_key?('match') -%>
+    <%= hilight['match'] %>" = "yes";
+  <%- end -%>
   <%- if hilight.has_key?('servertag') -%>
     servertag = "<%= hilight['servertag'] %>";
   <%- end -%>
   <%- if hilight.has_key?('color') -%>
     color = "<%= hilight['color'] %>";
   <%- end -%>
-  <%- if hilight.has_key?('matchcase') -%>
-     matchcase = "<%= bool2yesno(hilight['matchcase']) %>";
-  <%- end -%>
-  <%- if hilight.has_key?('regexp') -%>
-     regexp = "<%= bool2yesno(hilight['regexp']) %>";
+  <%- if hilight.has_key?('network') -%>
+    network = "<%= hilight['network'] %>";
   <%- end -%>
   <%- if hilight.has_key?('channels') -%>
     channels = (

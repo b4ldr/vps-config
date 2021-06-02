@@ -1,8 +1,8 @@
 type Irssi::Hilight = Struct[{
-    nick      => Boolean,
-    word      => Boolean,
-    servertag => Optional[String[1]],
-    color     => Optional[Pattern[/%\w/]],
-    matchcase => Optional[Boolean],
-    channels  => Optional[Array[String[1]]],
+  highlight => Optional[Enum['nick', 'word', 'line']],
+  match     => Optional[Enum['mask', 'full', 'matchcase', 'regexp']],
+  servertag => Optional[String[1]],
+  color     => Optional[Pattern[/%\w/]],
+  network   => Optional[String[1]],
+  channels  => Optional[Array[String[1]]],
 }]

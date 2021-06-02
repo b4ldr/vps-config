@@ -170,37 +170,37 @@ irssi::user_configs:
         level:
           - ALL
     hilights:
-      jbond:
-        nick: true
-        word: true
-        matchcase: true
+      '[^\)]jbond':
+        highlight: 'word'
+        match: 'regexp'
+      '(jbond)':
+        color: '%G'
+        highlight: 'word'
+        match: 'matchcase'
+        channels:
+          - '#wikimedia-operations'
       Jbond:
-        color: '%C'
-        nick: true
-        word: true
-        matchcase: true
+        color: '%G'
+        highlight: 'word'
+        match: 'matchcase'
         channels:
           - '#wikimedia-operations'
       Muehlenhoff:
-        color: '%c'
-        nick: true
-        word: true
-        matchcase: true
+        color: '%g'
+        highlight: 'word'
+        match: 'matchcase'
         channels:
           - '#wikimedia-operations'
       '14907':
-        nick: false
-        word: false
+        highlight: 'word'
         servertag: terahertz
       '#page':
         color: '%R'
-        nick: false
-        word: false
-        matchcase: true
+        highlight: 'line'
+        match: 'matchcase'
       "'Widespread puppet agent failures'":
         color: '%Y'
-        nick: false
-        word: false
+        highlight: 'line'
         channels:
           - '#wikimedia-operations'
     scripts:
