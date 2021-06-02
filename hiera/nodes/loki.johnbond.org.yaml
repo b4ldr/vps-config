@@ -117,7 +117,7 @@ irssi::user_configs:
         tls_verify: false
         username: 'balder-14907'
         channels:
-          '#ix': ()
+          '#ix': {}
       libera:
         address: 'irc.libera.chat'
         sasl_mechanism: 'PLAIN'
