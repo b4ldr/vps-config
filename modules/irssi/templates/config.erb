@@ -119,6 +119,9 @@ hilights = (
 <%- @hilights.each_pair do |name, hilight| -%>
   {
     text = "<%= name %>";
+  <%- if hilight.has_key?('priority') -%>
+    priority = "<%= hilight['priority'] %>";
+  <%- end -%>
   <%- if hilight.has_key?('highlight') -%>
     <%#- irssi config is strange -%>
     <%- if hilight['highlight'] == 'line' -%>

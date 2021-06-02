@@ -6,6 +6,7 @@ type Irssi::Hilight = Struct[{
   regexp    => Optional[Boolean],
   servertag => Optional[String[1]],
   color     => Optional[Pattern[/%\w/]],
+  priority  => Optional[Integer[1]],
   network   => Optional[String[1]],
   channels  => Optional[Array[String[1]]],
 }]
