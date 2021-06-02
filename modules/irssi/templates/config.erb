@@ -124,11 +124,11 @@ hilights = (
     <%- if hilight['highlight'] == 'line' -%>
     nick = "no";
     word = "no";
+    <%- elsif hilight['highlight'] == 'word' -%>
+    nick = "no";
+    word = "yes";
     <%- else -%>
     nick = "yes";
-      <%- if hilight['highlight'] == 'word' -%>
-    word = "yes";
-      <%- end -%>
     <%- end -%>
   <%- end -%>
   <%- if hilight.has_key?('match') -%>
