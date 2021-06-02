@@ -170,11 +170,11 @@ irssi::user_configs:
         level:
           - ALL
     hilights:
-      '\\bjbond\\b':
-        highlight: 'word'
-        regexp: true
+      '#page':
+        priority: 1000
+        color: '%R'
+        highlight: 'line'
         matchcase: true
-        priority: 10
       '(jbond)':
         color: '%G'
         highlight: 'word'
@@ -199,14 +199,14 @@ irssi::user_configs:
         channels:
           - '#wikimedia-operations'
           - '#foobar1'
+      '\\bjbond\\b':
+        highlight: 'word'
+        regexp: true
+        matchcase: true
+        priority: 10
       '14907':
         highlight: 'word'
         servertag: terahertz
-      '#page':
-        priority: 1000
-        color: '%R'
-        highlight: 'line'
-        matchcase: true
       "'Widespread puppet agent failures'":
         color: '%Y'
         highlight: 'line'
