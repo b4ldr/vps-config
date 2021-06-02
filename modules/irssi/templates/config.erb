@@ -131,8 +131,10 @@ hilights = (
     nick = "yes";
     <%- end -%>
   <%- end -%>
-  <%- if hilight.has_key?('match') -%>
-    <%= hilight['match'] %> = "yes";
+  <%- ['mask', 'full', 'matchcase', 'regexp'].each do |match| -%>
+    <%- if hilight.has_key?(match) -%>
+    <%= match %> = "<%= bool2yesno(ignore[match]) %>";
+    <%- end -%>
   <%- end -%>
   <%- if hilight.has_key?('servertag') -%>
     servertag = "<%= hilight['servertag'] %>";

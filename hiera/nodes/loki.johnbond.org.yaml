@@ -172,23 +172,24 @@ irssi::user_configs:
     hilights:
       '([^\(]|^|\s)jbond':
         highlight: 'word'
-        match: 'regexp'
+        regexp: true
+        matchcase: true
       '(jbond)':
         color: '%G'
         highlight: 'word'
-        match: 'matchcase'
+        matchcase: true
         channels:
           - '#wikimedia-operations'
       Jbond:
         color: '%G'
         highlight: 'word'
-        match: 'matchcase'
+        matchcase: true
         channels:
           - '#wikimedia-operations'
       Muehlenhoff:
         color: '%g'
         highlight: 'word'
-        match: 'matchcase'
+        matchcase: true
         channels:
           - '#wikimedia-operations'
       '14907':
