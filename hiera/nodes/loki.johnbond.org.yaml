@@ -170,7 +170,7 @@ irssi::user_configs:
         level:
           - ALL
     hilights:
-      '[^\(]jbond':
+      '([^\(]|^|\s)jbond':
         highlight: 'word'
         match: 'regexp'
       '(jbond)':

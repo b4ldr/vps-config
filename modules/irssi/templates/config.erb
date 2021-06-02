@@ -120,7 +120,7 @@ hilights = (
   {
     text = "<%= name %>";
   <%- if hilight.has_key?('highlight') -%>
-    <%# irssi config is strange %>
+    <%#- irssi config is strange -%>
     <%- if hilight['highlight'] == 'line' -%>
     nick = "no";
     word = "no";
@@ -146,7 +146,7 @@ hilights = (
   <%- if hilight.has_key?('channels') -%>
     channels = (
     <%- hilight['channels'].each do |channel| -%>
-      "<%= channel %>",
+      "<%= channel %>"
     <%- end -%>
     );
   <%- end -%>
