@@ -174,18 +174,18 @@ irssi::user_configs:
         highlight: 'word'
         regexp: true
         matchcase: true
-        priority: 100
+        priority: 10
       '(jbond)':
         color: '%G'
         highlight: 'word'
         matchcase: true
-        priority: 10
+        priority: 100
         channels:
           - '#wikimedia-operations'
           - '#foobar1'
       Jbond:
-        color: '%G'
-        priority: 10
+        color: '%B'
+        priority: 100
         highlight: 'word'
         matchcase: true
         channels:
@@ -193,7 +193,7 @@ irssi::user_configs:
           - '#foobar1'
       Muehlenhoff:
         priority: 50
-        color: '%g'
+        color: '%b'
         highlight: 'word'
         matchcase: true
         channels:
@@ -203,7 +203,7 @@ irssi::user_configs:
         highlight: 'word'
         servertag: terahertz
       '#page':
-        priority: 1
+        priority: 1000
         color: '%R'
         highlight: 'line'
         matchcase: true
