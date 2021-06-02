@@ -198,7 +198,7 @@ irssi::user_configs:
       '#page':
         color: '%R'
         highlight: 'line'
-        match: 'matchcase'
+        matchcase: true
       "'Widespread puppet agent failures'":
         color: '%Y'
         highlight: 'line'
