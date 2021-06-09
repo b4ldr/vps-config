@@ -175,6 +175,12 @@ irssi::user_configs:
         color: '%R'
         highlight: 'line'
         matchcase: true
+      "Widespread puppet agent failures-":
+        color: '%Y'
+        priority: 500
+        highlight: 'line'
+        channels:
+          - '#wikimedia-operations'
       '(jbond)':
         color: '%G'
         highlight: 'word'
@@ -207,11 +213,6 @@ irssi::user_configs:
       '14907':
         highlight: 'word'
         servertag: terahertz
-      "'Widespread puppet agent failures'":
-        color: '%Y'
-        highlight: 'line'
-        channels:
-          - '#wikimedia-operations'
     scripts:
       'autowhois.pl': {}
       'go.pl': {}
