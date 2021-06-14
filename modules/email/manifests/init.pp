@@ -1,8 +1,8 @@
 #
 class email (
     Stdlib::Unixpath $virtual_dir    = '/etc/exim4/virtual_dir',
-    Stdlib::Unixpath $tls_cert       = '/etc/letsencrypt/live/imaps.johnbond.org/fullchain.pem',
-    Stdlib::Unixpath $tls_key        = '/etc/letsencrypt/live/imaps.johnbond.org/privkey.pem',
+    Stdlib::Unixpath $tls_cert       = '/etc/letsencrypt/live/imaps.johnbond.org-0001/fullchain.pem',
+    Stdlib::Unixpath $tls_key        = '/etc/letsencrypt/live/imaps.johnbond.org-0001/privkey.pem',
     Stdlib::Unixpath $dkim_key       = '/etc/ssl/private/dkim.key',
     Stdlib::Host     $qualify_domain = 'johnbond.org',
     Hash             $domains        = {},
