@@ -125,6 +125,12 @@ irssi::user_configs:
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
+      debian:
+        address: 'irc.debian.net'
+        #sasl_mechanism: 'PLAIN'
+        #sasl_username: "%{alias('secret::libera_sasl_username')}"
+        #sasl_password: "%{alias('secret::libera_sasl_password')}"
+        channels: ['debian-golang']
       #freenode:
       #  address: 'chat.freenode.net'
       #  sasl_mechanism: 'PLAIN'
