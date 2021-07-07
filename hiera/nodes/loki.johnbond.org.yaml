@@ -126,7 +126,7 @@ irssi::user_configs:
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
       debian:
-        address: 'irc.debian.net'
+        address: 'irc.debian.org'
         #sasl_mechanism: 'PLAIN'
         #sasl_username: "%{alias('secret::libera_sasl_username')}"
         #sasl_password: "%{alias('secret::libera_sasl_password')}"
