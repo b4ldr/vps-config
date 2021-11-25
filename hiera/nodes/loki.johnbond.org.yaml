@@ -67,7 +67,7 @@ http::vhosts:
   johnbond.org:
     apache:
       serveraliases: www.johnbond.org
-      redirectmatch_regex: "^(/(?!.well-known/).*)"
+      redirectmatch_regexp: "^(/(?!.well-known/).*)"
       redirectmatch_dest: 'https://b4ldr.wordpress.com/$1'
   nel.johnbond.org:
     git_source: https://github.com/b4ldr/simple-flask-nel
