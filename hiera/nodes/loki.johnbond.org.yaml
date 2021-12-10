@@ -200,7 +200,7 @@ irssi::user_configs:
         channels:
           - '#wikimedia-operations'
           - '#foobar1'
-      Muehlenhoff:
+      JHathaway:
         priority: 50
         color: '%b'
         highlight: 'word'
