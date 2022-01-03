@@ -1,7 +1,7 @@
 $TTL 1h ; Set TTL to one hour for all important RRsets
 
 @	SOA	ns.johnbond.org. dns.johnbond.org. (
-		2022030101 ; Serial
+		2022030102 ; Serial
 		1h ; Refresh
 		10m ; Retry
 		10d; Expire
@@ -10,6 +10,7 @@ $TTL 1h ; Set TTL to one hour for all important RRsets
 	NS	loki.johnbond.org.
 	NS	ns1.he.net.
 
+	MX	1 aspmx.l.google.com.
 	MX	5 alt1.aspmx.l.google.com.
 	MX	5 alt2.aspmx.l.google.com.
 	MX	10 alt3.aspmx.l.google.com.
