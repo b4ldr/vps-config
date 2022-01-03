@@ -10,7 +10,11 @@ $TTL 1h ; Set TTL to one hour for all important RRsets
 	NS	loki.johnbond.org.
 	NS	ns1.he.net.
 
-	MX	10 loki.johnbond.org.
+	MX	5 alt1.aspmx.l.google.com.
+	MX	5 alt2.aspmx.l.google.com.
+	MX	10 alt3.aspmx.l.google.com.
+	MX	10 alt4.aspmx.l.google.com.
+
     A 67.205.10.42
     TXT "google-site-verification=d5GPcuQSylxdc9W56zy-oFRwLKSe1fDfGRjwb8N__lo"
     TXT "v=spf1 +mx ip4:206.189.25.239 ip6:2a03:b0c0:1:e0::4f7:f001 include:_spf.google.com ~all"
