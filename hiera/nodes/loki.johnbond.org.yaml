@@ -107,7 +107,7 @@ irssi::user_configs:
     autolog: true
     servers:
       guifi:
-        address: irc.guifi.net
+        address: irc.marsupi.org
         channels:
           '#guifi': {}
       oftc:
