@@ -106,6 +106,10 @@ irssi::user_configs:
     nick: 'jbond'
     autolog: true
     servers:
+      guifi:
+        address: irc.guifi.net
+        channels:
+          '#guifi': {}
       oftc:
         address:  'irc.oftc.net'
         tls_cert: '~/.irssi/certs/oftc.pem'
