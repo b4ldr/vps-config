@@ -108,6 +108,7 @@ irssi::user_configs:
     servers:
       guifi:
         address: irc.marsupi.org
+        tls_verify: false
         channels:
           '#guifi': {}
       oftc:
