@@ -205,14 +205,6 @@ irssi::user_configs:
         channels:
           - '#wikimedia-operations'
           - '#foobar1'
-      JHathaway:
-        priority: 50
-        color: '%b'
-        highlight: 'word'
-        matchcase: true
-        channels:
-          - '#wikimedia-operations'
-          - '#foobar1'
       '\\bjbond\\b':
         highlight: 'word'
         regexp: true
