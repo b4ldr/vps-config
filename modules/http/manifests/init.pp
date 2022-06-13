@@ -29,7 +29,10 @@ class http (
             'port'    => '80',
             'headers' => $headers,
         }
-        $_config = $default + $config['apache']
+        $_config = 'apach' in $config ? {
+          true    => $default + $config['apache'],
+          default => $default,
+        }
         if $config.has_key('git_source') {
             vcsrepo {pick($config['gitroot'], $_config['docroot']):
                 ensure   => latest,
