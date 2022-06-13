@@ -70,9 +70,10 @@ http::vhosts:
       redirectmatch_regexp: "^(/(?!.well-known/).*)"
       redirectmatch_dest: 'https://b4ldr.wordpress.com/$1'
   kittens.johnbond.org:
-    proxy_pass:
-      - path: '/stream'
-        url: 'http://localhost:8000/stream.mjpg'
+    apache:
+      proxy_pass:
+        - path: '/stream'
+          url: 'http://localhost:8000/stream.mjpg'
   nel.johnbond.org:
     git_source: https://github.com/b4ldr/simple-flask-nel
     gitroot: /srv/http/nel.johnbond.org
