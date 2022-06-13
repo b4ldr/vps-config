@@ -29,7 +29,7 @@ class http (
             'port'    => '80',
             'headers' => $headers,
         }
-        $_config = 'apach' in $config ? {
+        $_config = 'apache' in $config ? {
           true    => $default + $config['apache'],
           default => $default,
         }
