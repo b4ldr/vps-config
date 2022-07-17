@@ -37,9 +37,9 @@ http::vhosts:
         - www.attackplanner.co.uk
         - www.attackplanner.com
         - attackplanner.co.uk
+        - loki.johnbond.org
+        - imaps.johnbond.org
       docroot: /srv/http/attackplanner.com
-      redirect_status: 'permanent'
-      redirect_dest: https://attackplanner.com/
   attackplanner.com:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
@@ -48,6 +48,7 @@ http::vhosts:
         - www.attackplanner.com
         - attackplanner.co.uk
         - loki.johnbond.org
+        - imaps.johnbond.org
       port: 443
       ssl: true
       ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk/fullchain.pem
