@@ -12,6 +12,6 @@ mod 'knot',
   :git => 'https://github.com/b4ldr/puppet-knot',
   :ref => 'remove_tea'
 mod 'puppet-puppet_apply',
-  :git => 'https://github.com/b4ldr/puppet-puppet_apply'
+  :git => 'https://github.com/b4ldr/puppet_apply'
 mod 'puppet-irssi',
   :git => 'https://github.com/b4ldr/puppet-irssi'
