@@ -1,4 +1,4 @@
-base::packages:
+puppet_apply::packages:
   - vim
   - git
   - ruby-bundler
@@ -7,7 +7,7 @@ base::packages:
   - zsh
   - dnsutils
   - tmux
-base::users:
+puppet_apply::users:
   jbond:
     user:
       shell: /bin/zsh
