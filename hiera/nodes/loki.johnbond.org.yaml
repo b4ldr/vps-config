@@ -1,4 +1,4 @@
-not::ip_addresses:
+knot::ip_addresses:
   - "%{facts.networking.ip}"
   - "%{facts.networking.ip6}"
 knot::remotes:
