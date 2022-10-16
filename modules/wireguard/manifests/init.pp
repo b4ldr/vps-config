@@ -48,7 +48,7 @@ class wireguard (
       owner  => 'root',
       group  => 'root',
       mode   => '0400',
-      notify => Service['wireguard'];
+      notify => Service['wg-quick@wg0'];
     '/etc/wireguard':
       ensure => directory;
     '/etc/wireguard/wg0.conf':
