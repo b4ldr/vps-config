@@ -38,4 +38,8 @@ class wireguard (
     '/etc/wireguard/publickey':
       content => $public_key;
   }
+  service { 'wg-quick@wg0':
+    ensure => 'running',
+    enable => true,
+  }
 }
