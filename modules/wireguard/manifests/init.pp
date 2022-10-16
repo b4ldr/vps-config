@@ -10,7 +10,7 @@ class wireguard (
   Stdlib::Port        $port       = 51194
 ) {
   ensure_packages(['wireguard'])
-  firewall { 'wireguard':
+  firewall { '05_wireguard':
     proto  => 'udp',
     dport  => $port,
     action => 'accept',
