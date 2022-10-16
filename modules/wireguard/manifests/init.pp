@@ -33,7 +33,8 @@ class wireguard (
   }
   $config = @("config")
   [Interface]
-  PersistentKeepalive = ${keep_alive}
+  # TODO; possible the following is ony vlid for clients
+  # PersistentKeepalive = ${keep_alive}
   Address = ${ip_address}
   ListenPort = ${port}
   PrivateKey = ${private_key}
