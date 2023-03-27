@@ -47,10 +47,6 @@ my_fw::pre::rules:
     proto: 'tcp'
     dport: 22
     action: 'accept'
-  '004 accept':
-    proto: 'tcp'
-    dport: 4242
-    action: 'accept'
   '005 accept related established rules':
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
