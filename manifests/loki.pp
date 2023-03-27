@@ -8,5 +8,5 @@ node 'loki.johnbond.org' {
     include email
     include http
     include irssi
-    include wireguard
+    # include wireguard
 }
