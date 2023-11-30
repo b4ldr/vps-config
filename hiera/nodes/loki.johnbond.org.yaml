@@ -184,47 +184,11 @@ irssi::user_configs:
         level:
           - ALL
     hilights:
-      '#page':
-        priority: 1000
-        color: '%R'
-        highlight: 'line'
-        matchcase: true
-      "WidespreadPuppetFailure":
-        color: '%Y'
-        priority: 500
-        highlight: 'line'
-        channels:
-          - '#wikimedia-operations'
-      "Widespread puppet agent failures-":
-        color: '%Y'
-        priority: 500
-        highlight: 'line'
-        channels:
-          - '#wikimedia-operations'
-      '(jbond)':
-        color: '%G'
-        highlight: 'word'
-        matchcase: true
-        priority: 100
-        channels:
-          - '#wikimedia-operations'
-          - '#foobar1'
-      Jbond:
-        color: '%B'
-        priority: 100
-        highlight: 'word'
-        matchcase: true
-        channels:
-          - '#wikimedia-operations'
-          - '#foobar1'
       '\\bjbond\\b':
         highlight: 'word'
         regexp: true
         matchcase: true
         priority: 10
-      '14907':
-        highlight: 'word'
-        servertag: terahertz
     scripts:
       'autowhois.pl': {}
       'go.pl': {}
