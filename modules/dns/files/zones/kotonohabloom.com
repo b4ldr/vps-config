@@ -1,7 +1,7 @@
 $TTL 1h ; Set TTL to one hour for all important RRsets
 
 @	SOA	ns.johnbond.org. dns.johnbond.org. (
-		2024070900 ; Serial
+		2024071900 ; Serial
 		1h ; Refresh
 		10m ; Retry
 		10d; Expire
@@ -22,4 +22,4 @@ $TTL 1h ; Set TTL to one hour for all important RRsets
 _dmarc	TXT	"v=DMARC1;p=none;rua=mailto:dmarc@johnbond.org;"
 google._domainkey TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthlVXnTCh+2AcWPZSPUh6tX4GY2sfA08MNtnqieMxx/vVRVkrB1gAvEIS47NQ1wvqX9yECBpeIR9ebaY+hrlsyh1DdN7KyTae0hUACPVUjidDaKExz40ggL+Uv4osYmkpRcmvbbEGfQNiU9KZPit4fV1w2OBQyx5os7hEzi9PDOvGExSmyx8YNa0ohFDvnLU4wJABiaJzCzuyHdF3sR4d/od/H7/2icdBE7QlUDF1oTOGlQg17OTJ4LmYqtYZ9xKK0R3gSF7M50+9om5byv0qqiHdXshI2WdeVBQVRjd5ws/g2AXXBphx9IJdbAsJmM807xpcvlD+nM08OuF+ukWcwIDAQAB"
 $TTL 5m ; Set TTL for other RRsets to 6 hours
-www A 67.205.2.212
+www A 34.111.141.225
