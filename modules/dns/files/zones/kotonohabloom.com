@@ -1,7 +1,7 @@
 $TTL 1h ; Set TTL to one hour for all important RRsets
 
 @	SOA	ns.johnbond.org. dns.johnbond.org. (
-		2024071900 ; Serial
+		2024071901 ; Serial
 		1h ; Refresh
 		10m ; Retry
 		10d; Expire
@@ -16,7 +16,7 @@ $TTL 1h ; Set TTL to one hour for all important RRsets
 	MX	10 alt3.aspmx.l.google.com.
 	MX	10 alt4.aspmx.l.google.com.
 
-    A 67.205.2.212
+    A 34.111.141.225
     TXT "google-site-verification=d5GPcuQSylxdc9W56zy-oFRwLKSe1fDfGRjwb8N__lo"
     TXT "v=spf1 +mx ip4:206.189.25.239 ip6:2a03:b0c0:1:e0::4f7:f001 include:_spf.google.com ~all"
 _dmarc	TXT	"v=DMARC1;p=none;rua=mailto:dmarc@johnbond.org;"
