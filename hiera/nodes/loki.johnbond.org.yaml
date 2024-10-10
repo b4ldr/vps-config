@@ -144,11 +144,6 @@ irssi::user_configs:
       #  sasl_username: "%{alias('secret::sasl_username')}"
       #  sasl_password: "%{alias('secret::sasl_password')}"
       #  channels: "%{alias('secret::channels')}"
-      wmf:
-        address: irc.wikimedia.org
-        use_tls: false
-        tls_verify: false
-        port: 6667
     perl_script_config:
       awl_shared_sbar: 'OFF'
       awl_viewer: 'yes'
