@@ -168,7 +168,7 @@ irssi::user_configs:
         level:
           - NO_ACT
           - ALL
-        pattern: '(Jbond|Muehlenhoff)'
+        pattern: 'Jbond'
         regexp: true
         exception: true
       - mask: wikibugs
