@@ -134,7 +134,8 @@ irssi::user_configs:
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
       IRCnet:
-        address: ssl.ircnet.io
+        address: irc.nlnog.net
+        use_tls: false
         channels:
           '#NLNOG': {}
       #freenode:
