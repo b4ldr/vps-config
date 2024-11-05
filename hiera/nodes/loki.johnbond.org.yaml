@@ -138,6 +138,10 @@ irssi::user_configs:
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
+      nlnog:
+        address: irc.nlnog.net
+        channels:
+          '#NLNOG'
       #freenode:
       #  address: 'chat.freenode.net'
       #  sasl_mechanism: 'PLAIN'
