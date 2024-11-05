@@ -135,6 +135,7 @@ irssi::user_configs:
         channels: "%{alias('secret::libera_channels')}"
       IRCnet:
         address: irc.nlnog.net
+        port: 6667
         use_tls: false
         channels:
           '#NLNOG': {}
