@@ -137,6 +137,7 @@ irssi::user_configs:
         address: irc.nlnog.net
         port: 6667
         use_tls: false
+        tls_verify: false
         channels:
           '#NLNOG': {}
       #freenode:
