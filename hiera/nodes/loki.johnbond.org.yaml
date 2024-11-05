@@ -112,11 +112,6 @@ irssi::user_configs:
     nick: 'jbond'
     autolog: true
     servers:
-      guifi:
-        address: irc.marsupi.org
-        tls_verify: false
-        channels:
-          '#guifi': {}
       oftc:
         address:  'irc.oftc.net'
         tls_cert: '~/.irssi/certs/oftc.pem'
@@ -139,9 +134,7 @@ irssi::user_configs:
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
       IRCnet:
-        address: open.ircnet.net
-        use_tls: false
-        tls_verify: false
+        address: ssl.ircnet.io
         channels:
           '#NLNOG': {}
       #freenode:
