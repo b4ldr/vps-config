@@ -140,6 +140,7 @@ irssi::user_configs:
         channels: "%{alias('secret::libera_channels')}"
       IRCnet:
         address: open.ircnet.net
+        use_tls: false
         tls_verify: false
         channels:
           '#NLNOG': {}
