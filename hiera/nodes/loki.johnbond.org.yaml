@@ -141,7 +141,7 @@ irssi::user_configs:
       nlnog:
         address: irc.nlnog.net
         channels:
-          '#NLNOG'
+          '#NLNOG': {}
       #freenode:
       #  address: 'chat.freenode.net'
       #  sasl_mechanism: 'PLAIN'
