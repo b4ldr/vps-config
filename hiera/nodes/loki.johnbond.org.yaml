@@ -35,7 +35,6 @@ http::vhosts:
     apache:
       serveraliases:
         - www.attackplanner.co.uk
-        - www.attackplanner.com
         - attackplanner.co.uk
         - loki.johnbond.org
         - imaps.johnbond.org
@@ -50,8 +49,8 @@ http::vhosts:
         - imaps.johnbond.org
       port: 443
       ssl: true
-      ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk/fullchain.pem
-      ssl_key: /etc/letsencrypt/live/attackplanner.co.uk/privkey.pem
+      ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk-0002/fullchain.pem
+      ssl_key: /etc/letsencrypt/live/attackplanner.co.uk-0002/privkey.pem
     headers:
       'report-to':
         group: nelly
