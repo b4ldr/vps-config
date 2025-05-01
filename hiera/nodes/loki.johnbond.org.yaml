@@ -40,12 +40,11 @@ http::vhosts:
         - loki.johnbond.org
         - imaps.johnbond.org
       docroot: /srv/http/attackplanner.com
-  attackplanner.com:
+  attackplanner.co.uk:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
       serveraliases:
         - www.attackplanner.co.uk
-        - www.attackplanner.com
         - attackplanner.co.uk
         - loki.johnbond.org
         - imaps.johnbond.org
