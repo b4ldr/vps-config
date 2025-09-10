@@ -2,16 +2,16 @@ knot::ip_addresses:
   - "%{facts.networking.ip}"
   - "%{facts.networking.ip6}"
 knot::remotes:
-  'ns1.he.net':
-    address4: '216.218.130.2'
-    address6: '2001:470:100::2'
-  'ns2.he.net':
-    address4: '216.218.133.2'
-    address6: '2001:470:600::2'
+  "ns1.he.net":
+    address4: "216.218.130.2"
+    address6: "2001:470:100::2"
+  "ns2.he.net":
+    address4: "216.218.133.2"
+    address6: "2001:470:600::2"
 knot::default_provide_xfrs:
   - ns1.he.net
   - ns2.he.net
-dns::zones_dir: 'puppet:///modules/dns/zones'
+dns::zones_dir: "puppet:///modules/dns/zones"
 dns::zones:
   - johnbond.org
   - attackplanner.co.uk
@@ -26,8 +26,8 @@ dns::zones:
   - regbond.com
   - kotonohabloom.com
 apache::default_vhost: false
-apache::mod::dumpio::dump_io_input: 'On'
-apache::mod::dumpio::dump_io_output: 'On'
+apache::mod::dumpio::dump_io_input: "On"
+apache::mod::dumpio::dump_io_output: "On"
 apache::mod::wsgi::package_name: libapache2-mod-wsgi-py3
 apache::mod::wsgi::mod_path: /usr/lib/apache2/modules/mod_wsgi.so
 http::vhosts:
@@ -39,6 +39,9 @@ http::vhosts:
         - loki.johnbond.org
         - imaps.johnbond.org
       docroot: /srv/http/attackplanner.com
+  vault.attackplanner.co.uk:
+    git_source: https://github.com/tylercamp/twvault
+
   attackplanner.co.uk:
     git_source: https://github.com/b4ldr/tw-attack-planner
     apache:
@@ -52,7 +55,7 @@ http::vhosts:
       ssl_cert: /etc/letsencrypt/live/attackplanner.co.uk-0002/fullchain.pem
       ssl_key: /etc/letsencrypt/live/attackplanner.co.uk-0002/privkey.pem
     headers:
-      'report-to':
+      "report-to":
         group: nelly
         max_age: 86400
         endpoints:
@@ -67,12 +70,12 @@ http::vhosts:
     apache:
       serveraliases: www.johnbond.org
       redirectmatch_regexp: "^(/(?!.well-known/).*)"
-      redirectmatch_dest: 'https://b4ldr.wordpress.com/$1'
+      redirectmatch_dest: "https://b4ldr.wordpress.com/$1"
   kittens.johnbond.org:
     apache:
       proxy_pass:
-        - path: '/stream'
-          url: 'http://localhost:8000/stream.mjpg'
+        - path: "/stream"
+          url: "http://localhost:8000/stream.mjpg"
   nel.johnbond.org:
     git_source: https://github.com/b4ldr/simple-flask-nel
     gitroot: /srv/http/nel.johnbond.org
@@ -83,51 +86,51 @@ http::vhosts:
       ssl: true
       ssl_cert: /etc/letsencrypt/live/nel.johnbond.org/fullchain.pem
       ssl_key: /etc/letsencrypt/live/nel.johnbond.org/privkey.pem
-      priority: '01'
+      priority: "01"
       protocols:
         - h2
-      wsgi_application_group: '%%{}{GLOBAL}'
+      wsgi_application_group: "%%{}{GLOBAL}"
       wsgi_daemon_process:
         wsgi:
-          processes: '2'
-          threads: '15'
-          display-name: '%%{}{GROUP}'
+          processes: "2"
+          threads: "15"
+          display-name: "%%{}{GROUP}"
       wsgi_import_script: /srv/http/nel.johnbond.org/wsgi.py
       wsgi_import_script_options:
-        process-group: 'wsgi'
-        application-group: '%%{}{GLOBAL}'
-      wsgi_process_group: 'wsgi'
+        process-group: "wsgi"
+        application-group: "%%{}{GLOBAL}"
+      wsgi_process_group: "wsgi"
       wsgi_script_aliases:
-        '/': /srv/http/nel.johnbond.org/wsgi.py
+        "/": /srv/http/nel.johnbond.org/wsgi.py
     headers:
-      'access-control-allow-origin': '*'
-      'access-control-allow-headers': 'Content-Type'
-      'access-control-allow-methods': 'POST'
+      "access-control-allow-origin": "*"
+      "access-control-allow-headers": "Content-Type"
+      "access-control-allow-methods": "POST"
 irssi::user_configs:
   jbond:
-    real_name: 'John Bond'
-    user_name: 'jbond'
-    nick: 'jbond'
+    real_name: "John Bond"
+    user_name: "jbond"
+    nick: "jbond"
     autolog: true
     servers:
       oftc:
-        address:  'irc.oftc.net'
-        tls_cert: '~/.irssi/certs/oftc.pem'
+        address: "irc.oftc.net"
+        tls_cert: "~/.irssi/certs/oftc.pem"
         username: jbond
         password: "%{alias('secret::oftc_pass')}"
         channels:
-          '#debian-puppet': {}
-          '#debian-clojure': {}
-          '#debian-golang': {}
+          "#debian-puppet": {}
+          "#debian-clojure": {}
+          "#debian-golang": {}
       terahertz:
-        address: 'irc.terahertz.net'
+        address: "irc.terahertz.net"
         tls_verify: false
-        username: 'balder-14907'
+        username: "balder-14907"
         channels:
-          '#ix': {}
+          "#ix": {}
       libera:
-        address: 'irc.libera.chat'
-        sasl_mechanism: 'PLAIN'
+        address: "irc.libera.chat"
+        sasl_mechanism: "PLAIN"
         sasl_username: "%{alias('secret::libera_sasl_username')}"
         sasl_password: "%{alias('secret::libera_sasl_password')}"
         channels: "%{alias('secret::libera_channels')}"
@@ -137,7 +140,7 @@ irssi::user_configs:
         use_tls: false
         tls_verify: false
         channels:
-          '#NLNOG': {}
+          "#NLNOG": {}
       #freenode:
       #  address: 'chat.freenode.net'
       #  sasl_mechanism: 'PLAIN'
@@ -145,18 +148,18 @@ irssi::user_configs:
       #  sasl_password: "%{alias('secret::sasl_password')}"
       #  channels: "%{alias('secret::channels')}"
     perl_script_config:
-      awl_shared_sbar: 'OFF'
-      awl_viewer: 'yes'
-      awl_custom_xform: 's/wikimedia-/w-/'
-      tmux_away_nick: ''
-      tmux_away_grace: '900'
-      trackbar_require_seen: 'yes'
-      trackbar_string: '~'
-      trackbar_style: '%Y'
+      awl_shared_sbar: "OFF"
+      awl_viewer: "yes"
+      awl_custom_xform: "s/wikimedia-/w-/"
+      tmux_away_nick: ""
+      tmux_away_grace: "900"
+      trackbar_require_seen: "yes"
+      trackbar_string: "~"
+      trackbar_style: "%Y"
       prowl_apikey: "%{alias('secret::prowl_apikey')}"
-      awl_no_mode_hint: 'yes'
-      shorturl_debug: 'yes'
-      shorturl_send_to_channel: 'yes'
+      awl_no_mode_hint: "yes"
+      shorturl_debug: "yes"
+      shorturl_send_to_channel: "yes"
     ignores:
       - level:
           - JOINS
@@ -168,7 +171,7 @@ irssi::user_configs:
         level:
           - NO_ACT
           - ALL
-        pattern: 'Jbond'
+        pattern: "Jbond"
         regexp: true
         exception: true
       - mask: wikibugs
@@ -180,25 +183,30 @@ irssi::user_configs:
           - ALL
     hilights:
       '\\bjbond\\b':
-        highlight: 'word'
+        highlight: "word"
         regexp: true
         matchcase: true
         priority: 10
     scripts:
-      'autowhois.pl': {}
-      'go.pl': {}
-      'nickcolor.pl': {}
-      'trackbar.pl': {}
-      'adv_windowlist.pl':
-        source: 'puppet:///modules/irssi/adv_windowlist.pl'
-      'oopsie.pl':
-        source: 'puppet:///modules/irssi/oopsie.pl'
-      'prowl.pl':
-        source: 'puppet:///modules/irssi/prowl.pl'
-      'splitlong.pl':
-        source: 'puppet:///modules/irssi/splitlong.pl'
-      'tmux_away.pl':
-        source: 'puppet:///modules/irssi/tmux_away.pl'
+      "autowhois.pl": {}
+      "go.pl": {}
+      "nickcolor.pl": {}
+      "trackbar.pl": {}
+      "adv_windowlist.pl":
+        source: "puppet:///modules/irssi/adv_windowlist.pl"
+      "oopsie.pl":
+        source: "puppet:///modules/irssi/oopsie.pl"
+      "prowl.pl":
+        source: "puppet:///modules/irssi/prowl.pl"
+      "splitlong.pl":
+        source: "puppet:///modules/irssi/splitlong.pl"
+      "tmux_away.pl":
+        source: "puppet:///modules/irssi/tmux_away.pl"
     extra_aliases:
-      A: 'toggle awl_viewer'
-      WG: 'window goto'
+      A: "toggle awl_viewer"
+      WG: "window goto"
+postgresql::server::roles:
+  "twvault":
+    superuser: false
+    createdb: true
+    login: true
