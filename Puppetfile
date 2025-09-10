@@ -9,6 +9,7 @@ mod 'puppetlabs/apache'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/inifile'
 mod 'puppetlabs/postgresql'
+mod 'puppetlabs/sshkeys_core'
 mod 'camptocamp/systemd'
 mod 'knot',
   :git => 'https://github.com/b4ldr/puppet-knot',
