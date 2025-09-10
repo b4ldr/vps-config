@@ -9,5 +9,6 @@ node 'loki.johnbond.org' {
   include http
   include irssi
   include postgresql::server
+  include twvault
   # include wireguard
 }
