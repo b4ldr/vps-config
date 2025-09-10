@@ -210,4 +210,4 @@ postgresql::server::roles:
     superuser: false
     createdb: true
     login: true
-    password_hash: "SCRAM-SHA-256$4096:Fau6RO0hWZTBFPx7Ehektg==$q42HkmLqaWaZMRbWvRn4aDcVyjBFj43MxEoTziGyYg4=:6sJ0737D143NgxgkmsRqPm/ZHm/Fg0j72n14sjvUdWM="
+    password_hash: "SCRAM-SHA-256$4096:Aic9tUJHwfdOodkeCU2UNA==$dF1P2VDlUjsTBOXsRPz9GrpPFpklnEKcnZxfgMbVM08=:R8mDPAhOekdse+lHIy9sgUfiahjke7zx1RqiCoy7TXY="
