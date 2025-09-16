@@ -30,7 +30,7 @@ class email (
         purge   => true,
     }
     $domains.each |String $domain, Hash $config| {
-        $content = $config.has_key('aliases') ? {
+        $content = 'aliases' in $config ? {
             true    => $config['aliases'].reduce('') |$memo, $alias| {
                 "${memo}\n${alias[0]}: ${alias[1]}"
             },
