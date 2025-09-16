@@ -617,13 +617,6 @@ userforward:
   condition = ${if exists{$home/.forward} {yes} {no} }
 
 
-procmail:
-  debug_print = "R: procmail for $local_part@$domain"
-  driver = accept
-  domains = +local_domains
-  check_local_user
-  transport = procmail_pipe
-
 # This router matches local user mailboxes. If the router fails, the error
 # message is "Unknown user".
 
@@ -653,21 +646,6 @@ localuser:
 # handles an address.
 
 begin transports
-
-procmail_pipe:
-  debug_print = "T: procmail_pipe for $local_part@$domain"
-  driver = pipe
-  path = "/bin:/usr/bin:/usr/local/bin"
-  command = "/usr/bin/procmail -d $local_part"
-  return_path_add
-  delivery_date_add
-  envelope_to_add
-  check_string = "From "
-  escape_string = ">From "
-  umask = 077
-  user = $local_part
-  group = mail
-
 
 # This transport is used for delivering messages over SMTP connections.
 
