@@ -569,8 +569,9 @@ system_aliases:
   driver = redirect
   allow_fail
   allow_defer
-  domains = local_domains
-  data = ${expand:${lookup{$local_part}lsearch{<%= @virtual_dir %>/$domain}}}
+  domains = regbond.com : johnbond.org : kotonohabloom.com
+  condition = ${if exists{/etc/exim4/virtual_dir/$domain}{yes}{no}}
+  data = ${lookup{$local_part}lsearch{/etc/exim4/virtual_dir/$domain_data}}
   file_transport = address_file
   pipe_transport = address_pipe
 
@@ -682,7 +683,7 @@ local_delivery:
   delivery_date_add
   envelope_to_add
   return_path_add
-  group = mail
+  group = $local_part
   user = $local_part
   mode = 0600
   directory_mode = 0700
