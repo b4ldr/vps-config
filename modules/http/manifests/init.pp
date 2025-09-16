@@ -54,7 +54,7 @@ class http (
             firewall {"103 HTTP ${provider} ${port}":
                 proto    => 'tcp',
                 dport    => $port,
-                action   => 'accept',
+                jump     => 'accept',
                 provider => $provider,
             }
         }

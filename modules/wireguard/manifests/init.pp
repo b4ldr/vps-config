@@ -21,7 +21,7 @@ class wireguard (
   firewall { '05_wireguard':
     proto  => 'udp',
     dport  => $port,
-    action => 'accept',
+    jump   => 'accept',
   }
   $_allowed_ips = $allowed_ips ? {
     undef   => '',

@@ -15,7 +15,7 @@ class dns (
             firewall {"101 DNS ${provider} ${proto}":
                 proto    => $proto,
                 dport    => 53,
-                action   => 'accept',
+                jump     => 'accept',
                 provider => $provider,
             }
         }

@@ -64,7 +64,7 @@ class email (
             firewall {"102 email ${provider} ${port}":
                 proto    => 'tcp',
                 dport    => $port,
-                action   => 'accept',
+                jump     => 'accept',
                 provider => $provider,
             }
         }

@@ -33,51 +33,51 @@ puppet_apply::users:
 my_fw::pre::rules:
   '000 accept all icmp':
     proto: 'icmp'
-    action: 'accept'
+    jump: 'accept'
   '001 accept all to lo interface':
     proto: 'all'
     iniface: 'lo'
-    action : 'accept'
+    jump : 'accept'
   '002 reject local traffic not on loopback interface':
     iniface: '! lo'
     proto: 'all'
     destination: '127.0.0.1/8'
-    action: 'reject'
+    jump: 'reject'
   '003 accept ssh':
     proto: 'tcp'
     dport: 22
-    action: 'accept'
+    jump: 'accept'
   '005 accept related established rules':
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
-    action: 'accept'
+    jump: 'accept'
   '000 accept all icmp ipv6':
     proto: 'ipv6-icmp'
-    action: 'accept'
+    jump: 'accept'
     provider: ip6tables
   '001 accept all to lo interface ipv6':
     proto: 'all'
     iniface: 'lo'
-    action : 'accept'
+    jump : 'accept'
     provider: ip6tables
   '002 reject local traffic not on loopback interface ipv6':
     iniface: '! lo'
     proto: 'all'
     destination: '::1'
-    action: 'reject'
+    jump: 'reject'
     provider: ip6tables
   '003 accept ssh ipv6':
     proto: 'tcp'
     dport: 22
-    action: 'accept'
+    jump: 'accept'
     provider: ip6tables
   '004 accept ipv6':
     proto: 'tcp'
     dport: 4242
-    action: 'accept'
+    jump: 'accept'
     provider: ip6tables
   '005 accept related established rules ipv6':
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
-    action: 'accept'
+    jump: 'accept'
     provider: ip6tables
