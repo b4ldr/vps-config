@@ -569,6 +569,7 @@ system_aliases:
   driver = redirect
   allow_fail
   allow_defer
+  domains = local_domains
   data = ${expand:${lookup{$local_part}lsearch{<%= @virtual_dir %>/$domain}}}
   file_transport = address_file
   pipe_transport = address_pipe
