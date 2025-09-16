@@ -16,7 +16,7 @@ class dns (
                 proto    => $proto,
                 dport    => 53,
                 jump     => 'accept',
-                provider => $provider,
+                protocol => $provider,
             }
         }
     }

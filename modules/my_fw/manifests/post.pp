@@ -8,6 +8,6 @@ class my_fw::post {
     proto    => 'all',
     jump     => 'reject',
     before   => undef,
-    provider => 'ip6tables',
+    protocol => 'ip6tables',
   }
 }

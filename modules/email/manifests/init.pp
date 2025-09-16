@@ -65,7 +65,7 @@ class email (
                 proto    => 'tcp',
                 dport    => $port,
                 jump     => 'accept',
-                provider => $provider,
+                protocol => $provider,
             }
         }
     }
