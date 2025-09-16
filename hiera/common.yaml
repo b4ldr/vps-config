@@ -54,30 +54,30 @@ my_fw::pre::rules:
   '000 accept all icmp ipv6':
     proto: 'ipv6-icmp'
     jump: 'accept'
-    provider: ip6tables
+    protocol: ip6tables
   '001 accept all to lo interface ipv6':
     proto: 'all'
     iniface: 'lo'
     jump : 'accept'
-    provider: ip6tables
+    protocol: ip6tables
   '002 reject local traffic not on loopback interface ipv6':
     iniface: '! lo'
     proto: 'all'
     destination: '::1'
     jump: 'reject'
-    provider: ip6tables
+    protocol: ip6tables
   '003 accept ssh ipv6':
     proto: 'tcp'
     dport: 22
     jump: 'accept'
-    provider: ip6tables
+    protocol: ip6tables
   '004 accept ipv6':
     proto: 'tcp'
     dport: 4242
     jump: 'accept'
-    provider: ip6tables
+    protocol: ip6tables
   '005 accept related established rules ipv6':
     proto: 'all'
     state: ['RELATED', 'ESTABLISHED']
     jump: 'accept'
-    provider: ip6tables
+    protocol: ip6tables
