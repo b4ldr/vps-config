@@ -26,7 +26,7 @@ class http (
         }
         $default = {
             'docroot' => "${docroot_base}/${vhost}",
-            'port'    => '80',
+            'port'    => 80,
             'headers' => $headers,
         }
         $_config = 'apache' in $config ? {
