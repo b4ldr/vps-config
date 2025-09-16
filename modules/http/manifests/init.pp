@@ -13,7 +13,7 @@ class http (
         include apache::mod::dumpio
     }
     $vhosts.each |$vhost, $config| {
-        if $config.has_key('headers') {
+        if 'headers' in $config {
             $headers = $config['headers'].map |$header| {
                 $value = $header[1] ? {
                     String  => $header[1],
@@ -33,7 +33,7 @@ class http (
           true    => $default + $config['apache'],
           default => $default,
         }
-        if $config.has_key('git_source') {
+        if 'git_source' in $config {
             vcsrepo {pick($config['gitroot'], $_config['docroot']):
                 ensure   => latest,
                 provider => git,
